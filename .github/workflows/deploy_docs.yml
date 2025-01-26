@@ -5,7 +5,7 @@ on:
     workflows: ["Release", "release"]
     types: [completed]
     branches:
-      - main
+      - "main"
 
 jobs:
     deploy-docs:
