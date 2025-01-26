@@ -68,7 +68,7 @@ jobs:
       - name: Pull the version increments for all packages on main
         run: |
           git fetch origin main
-          git pull origin main --ff-only
+          git reset --hard origin/main
 
       - name: Create main folder with contents of the main branch
         run: |
