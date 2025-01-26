@@ -1,12 +1,11 @@
 name: Deploy Docs
 
 on:
-    workflow_run:
-      workflows: ["Release"]  # Name of the first workflow
-      types:
-        - completed  # Can be 'requested', 'completed', or 'in_progress'
-      branches:
-        - main  # Only run on the main branch
+  workflow_run:
+    workflows: ["Release", "release"]
+    types: [completed]
+    branches:
+      - main
 
 jobs:
     deploy-docs:
