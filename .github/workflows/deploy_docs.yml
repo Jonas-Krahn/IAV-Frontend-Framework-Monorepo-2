@@ -2,10 +2,8 @@ name: Deploy Docs
 
 on:
   workflow_run:
-    workflows: ["Release", "release"]
+    workflows: ["Release", "release", "release.yml"]
     types: [completed]
-    branches:
-      - "main"
 
 jobs:
     deploy-docs:
