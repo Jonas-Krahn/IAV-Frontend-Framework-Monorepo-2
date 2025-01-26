@@ -1,3 +1,9 @@
+## @test-ff-monorepo-6/test-module-2-v1.0.0 (2025-01-26)
+
+### Features
+
+* Test Release ([a055899](https://github.com/Jonas-Krahn/IAV-Frontend-Framework-Monorepo-2/commit/a055899857229292472f5814476a88525d50c2a2))
+
 ## [1.1.1-dev.2](https://github.com/iavofficial/IAVFrontendFramework/compare/v1.1.1-dev.1...v1.1.1-dev.2) (2024-12-04)
 
 ### Bug Fixes
