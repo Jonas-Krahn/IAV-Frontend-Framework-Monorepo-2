@@ -16,11 +16,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import {useTranslator} from "@test-ff-monorepo-4/core/translators";
-import {ImprintText} from "@test-ff-monorepo-4/core/imprint";
+import {useTranslator} from "@test-ff-monorepo-6/core/translators";
+import {ImprintText} from "@test-ff-monorepo-6/core/imprint";
 import {useContext} from "react";
-import {ColorSettingsContext} from "@test-ff-monorepo-4/core/colorSettingsContext";
-import "@test-ff-monorepo-4/core/globalColors.css";
+import {ColorSettingsContext} from "@test-ff-monorepo-6/core/colorSettingsContext";
+import "@test-ff-monorepo-6/core/globalColors.css";
 
 export const LegalDocuments = () => {
     const t = useTranslator();
