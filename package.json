@@ -1,0 +1,49 @@
+{
+  "name": "@test-ff-monorepo-4/core",
+  "version": "1.0",
+  "private": false,
+  "license": "Apache-2.0",
+  "contributors": [
+    {
+      "name": "Joerg Jonas Krahn",
+      "email": "joerg.jonas.krahn@iav.de"
+    },
+    {
+      "name": "Daniel Helfenstein",
+      "email": "daniel.helfenstein@iav.de"
+    },
+    {
+      "name": "Christian Becke",
+      "email": "christian.becke@iav.de"
+    },
+    {
+      "name": "Mike Wegele",
+      "email": "mike.wegele@iav.de"
+    }
+  ],
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.3.3",
+    "semantic-release": "^24.2.1",
+    "semantic-release-monorepo": "^8.0.2",
+    "cross-env": "^7.0.3",
+    "turbo": "^2.3.3"
+  },
+  "scripts": {
+    "setup:root": "npm i",
+    "checkout-docs:root": "./scripts/unix/copy-root-docs-and-prepare.sh",
+    "dev": "turbo run dev build-live",
+    "test": "turbo run test",
+    "build": "turbo run build",
+    "release": "turbo run release --concurrency=1",
+    "generate-docs": "turbo run generate-docs"
+  },
+  
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "npm@11.0.0"
+}
