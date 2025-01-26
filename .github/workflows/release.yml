@@ -68,12 +68,12 @@ jobs:
       - name: Pull the version increments for all packages on main
         run: |
           git fetch origin main
-          git reset --hard origin/main
+          git pull origin main --ff-only
 
       - name: Create main folder with contents of the main branch
         run: |
           mkdir main
-          git archive --format=tar main | tar -x -C main
+          git archive --format=tar origin/main | tar -x -C main
 
       - run: chmod +x ./main/scripts/unix/*
                 
