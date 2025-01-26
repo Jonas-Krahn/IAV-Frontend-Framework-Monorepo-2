@@ -42,7 +42,7 @@ for scope in "$SOURCE_DIR"/*; do
     fi
 done
 
-#rm -rf main
+rm -rf main
 
 git add .
 git commit -m "chore: Deploy updated documentation"
