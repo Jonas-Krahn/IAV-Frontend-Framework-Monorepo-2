@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# IMPORTANT: This file only takes packages with a scope (for example @test-ff-monorepo-6/core) into account.
+# IMPORTANT: This file only takes packages with a scope (for example @test-ff-monorepo-8/core) into account.
 # IMPORTANT: This script should be executed in the root folder of the repository.
 
 SOURCE_DIR="main/generated_docs/packages"

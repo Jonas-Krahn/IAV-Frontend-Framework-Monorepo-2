@@ -16,7 +16,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useTranslator } from "@test-ff-monorepo-6/core/translators";
+import { useTranslator } from "@test-ff-monorepo-8/core/translators";
 
 export const ExampleComponent3 = () => {
   const t = useTranslator();

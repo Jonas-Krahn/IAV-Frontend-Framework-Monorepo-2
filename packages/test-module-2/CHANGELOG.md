@@ -1,4 +1,4 @@
-## @test-ff-monorepo-6/test-module-2-v1.0.0 (2025-01-26)
+## @test-ff-monorepo-8/test-module-2-v1.0.0 (2025-01-26)
 
 ### Features
 
