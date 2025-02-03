@@ -16,17 +16,29 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+const basePath = '/IAVFrontendFramework/packages/core';
+const localVersion = "docs-version";
+
 document.addEventListener('DOMContentLoaded', async () => {
-    const getNewestVersion = async () => {
-        return await fetch("./version-list.md")
-            .then(response => response.text())
-            .then(data => {
-                const versions = data.trim().split('\n');
-                return versions[versions.length - 1];
-            })
-    };
-    const newestVersion = await getNewestVersion();
-    if (newestVersion) {
-        window.location.href = `/IAVFrontendFramework/${newestVersion}/index.html`;
-    }
+    const newestVersion = await getOptionalVersionList();
+    console.log('Base Path:', basePath, 'Newest Version:', newestVersion);
+
+    const path = `/IAVFrontendFramework/packages/core/${newestVersion}/index.html`;
+    pushWindowState(path);
 });
+
+const getOptionalVersionList = async () => {
+    const response = await fetch("../version-list.md");
+    if (response.ok) {
+        const data = await response.text();
+        const versions = data.trim().split('\n');
+        return versions[versions.length - 1];
+    } else {
+        return localVersion;
+    }
+};
+
+const pushWindowState = (path) => {
+    const newUrl = new URL(path, window.location.origin);
+    window.location.href = newUrl.pathname + newUrl.search
+};
