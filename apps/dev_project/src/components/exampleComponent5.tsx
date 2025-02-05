@@ -16,16 +16,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useTranslator } from "@test-ff-monorepo-6/core/translators";
-import { BLUE3, WHITE } from "@test-ff-monorepo-6/core/constants";
-import { CellPaddings, ContentCell } from "@test-ff-monorepo-6/core/contentCell";
+import { useTranslator } from "@iavofficial/core/translators";
+import { BLUE3, WHITE } from "@iavofficial/core/constants";
+import { CellPaddings, ContentCell } from "@iavofficial/core/contentCell";
 import {
   ContentLayout,
   LayoutBehaviour,
-} from "@test-ff-monorepo-6/core/contentLayout";
+} from "@iavofficial/core/contentLayout";
 import { Button } from "primereact/button";
 import { useState } from "react";
-import { ContentStyleTemplates } from "@test-ff-monorepo-6/core/contentStyle";
+import { ContentStyleTemplates } from "@iavofficial/core/contentStyle";
 
 export const ExampleComponent5 = () => {
   const [translationString, setTranslationString] = useState("");

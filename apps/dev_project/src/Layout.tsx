@@ -18,11 +18,11 @@
 
 import {SelectButton} from "primereact/selectbutton";
 import {useState} from "react";
-import {UILayer} from "@test-ff-monorepo-6/core/uiLayer";
-import {TranslateFunctionType} from "@test-ff-monorepo-6/core/translationFunction";
-import {BasicAuthenticationView} from "@test-ff-monorepo-6/core/basicAuthenticationView";
-import {BasicContentWrapper} from "@test-ff-monorepo-6/core/basicContentWrapper";
-import {Group} from "@test-ff-monorepo-6/core/group";
+import {UILayer} from "@iavofficial/core/uiLayer";
+import {TranslateFunctionType} from "@iavofficial/core/translationFunction";
+import {BasicAuthenticationView} from "@iavofficial/core/basicAuthenticationView";
+import {BasicContentWrapper} from "@iavofficial/core/basicContentWrapper";
+import {Group} from "@iavofficial/core/group";
 import InfoIcon from "./assets/infoIcon.svg?react";
 import {LegalDocuments} from "./components/legalDocuments";
 import {ExampleComponent1} from "./components/exampleComponent1";
@@ -30,13 +30,13 @@ import {ExampleComponent6} from "./components/exampleComponent6";
 import {ExampleComponent3} from "./components/exampleComponent3";
 import {ExampleComponent4} from "./components/exampleComponent4";
 import {ExampleComponent5} from "./components/exampleComponent5";
-import {simpleNavbarTabFactory} from "@test-ff-monorepo-6/core/simpleNavbarTabFactory";
-import {privilegedNavbarTabFactory} from "@test-ff-monorepo-6/core/privilegedNavbarTabFactory";
+import {simpleNavbarTabFactory} from "@iavofficial/core/simpleNavbarTabFactory";
+import {privilegedNavbarTabFactory} from "@iavofficial/core/privilegedNavbarTabFactory";
 import {ExampleComponent2} from "./components/exampleComponent2";
-import {HeaderPanelElement} from "@test-ff-monorepo-6/core/headerPanelElement";
+import {HeaderPanelElement} from "@iavofficial/core/headerPanelElement";
 import {PrimeIcons} from "primereact/api";
-import {WHITE} from "@test-ff-monorepo-6/core/constants";
-import {HeaderMenuElement} from "@test-ff-monorepo-6/core/headerMenuElement";
+import {WHITE} from "@iavofficial/core/constants";
+import {HeaderMenuElement} from "@iavofficial/core/headerMenuElement";
 
 function Layout() {
     const [selectedButtonOption, setSelectedButtonOption] = useState("Simulated");

@@ -1,9 +1,9 @@
 {
-  "name": "@test-ff-monorepo-6/core",
+  "name": "@iavofficial/core",
   "version": "1.0.0",
   "private": false,
   "license": "Apache-2.0",
-  "description": "This framework is the foundation of IAV frontend applications to provide maintainability, expandability, unification and an improved developer experience.",
+  "description": "This framework is the foundation of frontend applications to provide maintainability, expandability, unification and an improved developer experience.",
   "scripts": {
     "setup": "npm i",
     "build": "npx babel ./src --out-dir ./dist --extensions .ts,.tsx --copy-files && npx babel ./package.json --out-dir ./dist --copy-files && npx tsc --outDir ./dist",
