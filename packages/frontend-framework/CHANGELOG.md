@@ -1,3 +1,9 @@
+## [@test-ff-9/frontend-framework-v2.1.0](https://github.com/Jonas-Krahn/IAV-Frontend-Framework-Monorepo-2/compare/@test-ff-9/frontend-framework-v2.0.0...@test-ff-9/frontend-framework-v2.1.0) (2025-02-10)
+
+### Features
+
+* Test Release ([dc3edb6](https://github.com/Jonas-Krahn/IAV-Frontend-Framework-Monorepo-2/commit/dc3edb6016a8b1d9dabc5be58a03ca65ebef30e2))
+
 ## [1.1.1-dev.2](https://github.com/iavofficial/IAVFrontendFramework/compare/v1.1.1-dev.1...v1.1.1-dev.2) (2024-12-04)
 
 ### Bug Fixes
