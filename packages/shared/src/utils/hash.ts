@@ -16,6 +16,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+// TEST RELEASE
+
 export function generateHash(value: string) {
   let hash = 0,
     i,
