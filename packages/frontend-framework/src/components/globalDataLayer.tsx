@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,37 +16,39 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, {PropsWithChildren, useContext} from "react";
+import React, {PropsWithChildren} from "react";
 import {CookiesProvider} from "react-cookie";
-import {AuthContext} from "../contexts/auth";
 import {Translations} from "../contexts/language";
 import {
   DefaultLanguageProvider,
   LanguageOptions,
 } from "./internationalization/defaultLanguageProvider";
-import {DummyAuthenticationProvider} from "./authentication/default/dummyAuthenticationProvider";
 import {ColorProvider, ColorProviderProps} from "../coloring/colorProvider";
-import {DEFAULT_FALLBACK_LANGUAGE} from "../constants";
 import {BrowserRouter} from "react-router-dom";
+import {EnhancedStore} from "@reduxjs/toolkit";
+import {Provider} from "react-redux";
+import {FFMandatoryModules, FFMandatoryState} from "../store";
+import {ModuleContextProvider} from "../contexts/providers/moduleContextProvider";
+import {DEFAULT_FALLBACK_LANGUAGE} from "@ff-test-modularization/frontend-framework-shared/constants";
+import {AuthState} from "@ff-test-modularization/frontend-framework-shared/authenticationProvider";
 
 // Create this type to make fallbackLang optional for the user.
 type GlobalDataLayerLanguageOptions = Omit<LanguageOptions, "fallbackLang"> & {
   fallbackLang?: string;
 };
 
-interface Props {
+interface Props<TAuthState extends AuthState> {
+  modules: FFMandatoryModules<TAuthState>;
+  store: EnhancedStore<FFMandatoryState>;
   languageOptions?: GlobalDataLayerLanguageOptions;
   translations?: Translations;
   initI18Next?: () => void;
   colorSettings?: ColorProviderProps;
 }
 
-export const GlobalDataLayer = (props: PropsWithChildren<Props>) => {
-  const authContext = useContext(AuthContext);
-  const AuthenticationProvider = authContext
-    ? React.Fragment
-    : DummyAuthenticationProvider;
-
+export const GlobalDataLayer = <TAuthState extends AuthState>(
+  props: PropsWithChildren<Props<TAuthState>>,
+) => {
   const fallbackLang =
     props.languageOptions?.fallbackLang ?? DEFAULT_FALLBACK_LANGUAGE;
   const initialLang =
@@ -57,18 +59,47 @@ export const GlobalDataLayer = (props: PropsWithChildren<Props>) => {
   };
 
   return (
-    <CookiesProvider>
-      <AuthenticationProvider>
-        <DefaultLanguageProvider
-          languageOptions={languageOptions}
-          translations={props.translations}
-          initI18Next={props.initI18Next}
-        >
-          <ColorProvider {...props.colorSettings}>
-            <BrowserRouter>{props.children}</BrowserRouter>
-          </ColorProvider>
-        </DefaultLanguageProvider>
-      </AuthenticationProvider>
-    </CookiesProvider>
+    <ModuleContextProvider modules={props.modules}>
+      <Provider store={props.store}>
+        <ModuleLifecycleCaller modules={props.modules}>
+          <CookiesProvider>
+            <DefaultLanguageProvider
+              languageOptions={languageOptions}
+              translations={props.translations}
+              initI18Next={props.initI18Next}
+            >
+              <ColorProvider {...props.colorSettings}>
+                <BrowserRouter>{props.children}</BrowserRouter>
+              </ColorProvider>
+            </DefaultLanguageProvider>
+          </CookiesProvider>
+        </ModuleLifecycleCaller>
+      </Provider>
+    </ModuleContextProvider>
   );
+};
+
+const ModuleLifecycleCaller = <TAuthState extends AuthState>(
+  props: PropsWithChildren<{
+    modules: FFMandatoryModules<TAuthState> & Record<string, any>;
+  }>,
+) => {
+  // React hooks have to be called in the same order at every render.
+  // Because of this the sort method is used to create an array of the
+  // modules in a stable order.
+  const moduleKeys = React.useMemo(
+    () => Object.keys(props.modules).sort(),
+    [props.modules],
+  );
+
+  // Call the useModuleLifecycle Hook for every module.
+  // This approach is only safe if moduleKeys is stable (because of the
+  // Hook rules described above).
+  moduleKeys.forEach((key) => {
+    const useModuleLifecycle =
+      props.modules[key].useModuleLifecycle ?? (() => {});
+    useModuleLifecycle();
+  });
+
+  return props.children;
 };

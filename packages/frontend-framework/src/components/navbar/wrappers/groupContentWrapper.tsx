@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,13 +19,13 @@
 import React, {ReactElement} from "react";
 import {RouteProps} from "react-router-dom";
 import {TabGroup} from "../tabs/tabGroup/tabGroup";
-import {generateHashForValues} from "../../../utils/hash";
 import {TranslateFunctionType} from "../../../types/translationFunction";
 import {GroupableTabAndContentWrapper} from "./typesWrappers";
 import {
   InjectedOptionsByGroupToWrapper,
   InjectedOptionsByNavbarToWrapper,
 } from "../types/typesInjectedOptions";
+import { generateHashForValues } from "@ff-test-modularization/frontend-framework-shared/hash";
 
 export class Group implements GroupableTabAndContentWrapper {
   private _insideGroup = false;

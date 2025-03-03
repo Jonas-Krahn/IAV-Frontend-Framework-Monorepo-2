@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,35 +20,39 @@ import "primeflex/primeflex.css";
 import "primereact/resources/themes/nova/theme.css";
 import "primereact/resources/primereact.css";
 import "primeicons/primeicons.css";
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect} from "react";
 import {Route, Routes, useLocation, useNavigate} from "react-router-dom";
-import "./css/constants.css";
-import "./css/globalChangesOnPrimeReactComponents.css";
-import "./css/globalSettings.css";
 import {BasicAuthenticationView} from "./authentication/default/basicAuthenticationView";
 import {SettingsMenuOptions} from "./header/settingsMenu";
 import {CookieBanner} from "./cookie/cookieBanner";
-import {AuthContext} from "../contexts/auth";
-import {AuthenticationViewProps} from "./authentication/authenticationViewProps";
 import {MainView} from "./mainView";
 import {DefaultImprint} from "./imprint/defaultImprint";
 import {TabAndContentWrapper} from "./navbar/wrappers/typesWrappers";
-import {NavbarSettingsProvider} from "../providers/navbarSettingsProvider";
+import {NavbarSettingsProvider} from "../contexts/providers/navbarSettingsProvider";
 import {StaticCollapsedState} from "../types/navbarSettingsTypes";
-
-import "./uiLayer.css";
-import "./css/fonts.css";
-import "./css/darkModeInputsWorkAround.css";
 import {HeaderOptions} from "./header/header";
 import {UserMenuOptions} from "./header/userMenu";
 import {setAcceptCookies} from "../utils/setAcceptCookies";
 import {useCookies} from "react-cookie";
-import {ACCEPTED_COOKIES_NAME} from "../constants";
+import {useDefaultSelector} from "../store";
+import {ACCEPTED_COOKIES_NAME} from "@ff-test-modularization/frontend-framework-shared/constants";
+import {AuthenticationViewProps} from "@ff-test-modularization/frontend-framework-shared/authenticationViewProps";
+import "./uiLayer.css";
+import "../css/fonts.css";
+import "../css/darkModeInputsWorkAround.css";
+import "../css/constants.css";
+import "../css/globalChangesOnPrimeReactComponents.css";
+import "../css/globalSettings.css";
+import "../css/globalColors.css";
+import "../css/authenticationView.css";
 
 export interface AuthOptions {
   backgroundImage?: string;
   companyText?: string;
   preventDarkmode?: boolean;
+  errorMessages?: {
+    passwordErrorMessage?: string;
+  };
 }
 
 export interface NavbarOptions {
@@ -70,10 +74,11 @@ export interface Props {
   authOptions?: AuthOptions;
   hideLegalDocuments?: boolean;
   navbarOptions?: NavbarOptions;
+  hideNavbar?: boolean;
 }
 
 export const UILayer = (props: Props) => {
-  const authContext = useContext(AuthContext);
+  const {hasAuthenticated} = useDefaultSelector((state) => state.auth);
 
   const [, setCookie] = useCookies([ACCEPTED_COOKIES_NAME]);
 
@@ -120,7 +125,7 @@ export const UILayer = (props: Props) => {
           />
         )}
 
-        {!props.disableLogin && !authContext?.hasAuthenticated() && (
+        {!props.disableLogin && !hasAuthenticated && (
           <Route
             path="/documents"
             element={
@@ -133,7 +138,7 @@ export const UILayer = (props: Props) => {
           />
         )}
 
-        {!authContext?.hasAuthenticated() ? (
+        {!props.disableLogin && !hasAuthenticated ? (
           <Route path="/*" element={<></>} />
         ) : (
           <>
@@ -148,6 +153,7 @@ export const UILayer = (props: Props) => {
                   documentsComponent={props.documentsComponent}
                   tabAndContentWrappers={props.tabAndContentWrappers}
                   hideLegalDocuments={props.hideLegalDocuments}
+                  hideNavbar={props.hideNavbar}
                 />
               }
             />
@@ -170,31 +176,15 @@ interface RedirectorProps {
  * @constructor
  */
 const Redirector = (props: RedirectorProps) => {
+  const {hasAuthenticated} = useDefaultSelector((state) => state.auth);
+
   const disableLogin = props.disableLogin;
-
-  const [, setIntialNavigationDone] = useState(false);
-
-  const authContext = useContext(AuthContext);
-  const userIsAuthenticated = authContext!.hasAuthenticated();
 
   const currentPath = useLocation().pathname;
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Case: Login is disabled.
-    if (disableLogin) {
-      setIntialNavigationDone((prevState) => {
-        if (!prevState) {
-          navigate(props.startingPoint.valueOf());
-        }
-        // At this point the state should always be true.
-        return true;
-      });
-      return;
-    }
-
-    // Case: Login is enabled.
-    if (!userIsAuthenticated) {
+    if (!hasAuthenticated) {
       if (currentPath !== "/documents") {
         navigate("/login");
       }
@@ -206,7 +196,7 @@ const Redirector = (props: RedirectorProps) => {
   }, [
     disableLogin,
     currentPath,
-    userIsAuthenticated,
+    hasAuthenticated,
     navigate,
     props.startingPoint,
   ]);

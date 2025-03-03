@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,13 +16,13 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import {PropsWithChildren, useCallback, useState} from "react";
-import {State} from "@iavofficial/frontend-framework/dummyAuthenticationProvider";
-import {AuthContext, Credentials} from "@iavofficial/frontend-framework/auth";
+/*import {PropsWithChildren, useCallback, useState} from "react";
+import {State} from "@ff-test-modularization/frontend-framework/dummyAuthenticationProvider";
+import {AuthContext, Credentials} from "@ff-test-modularization/frontend-framework/auth";*/
 
-interface Props {
+/*interface Props {
     additionalContextValues?: { [key: string]: any };
-}
+}*/
 
 
 /**
@@ -32,7 +32,7 @@ interface Props {
  * @param props - The properties passed to the component, including children components.
  * @constructor
  */
-export const AuthenticationStore = (props: PropsWithChildren<Props>) => {
+/*export const AuthenticationStore = (props: PropsWithChildren<Props>) => {
 
     const {
         children
@@ -96,5 +96,4 @@ export const AuthenticationStore = (props: PropsWithChildren<Props>) => {
         </AuthContext.Provider>
     );
 };
-
-
+*/

@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,19 +16,23 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-const basePath = '/IAVFrontendFramework/packages/core';
+const getDirName = () => {
+    const parts = window.location.pathname.split('/');
+    const index = parts.indexOf('packages');
+    return index !== -1 && parts.length > index + 1 ? parts[index + 1] : null;
+};
+
+const basePath = `/IAVFrontendFramework/packages/${getDirName()}`;
 const localVersion = "docs-version";
 
 document.addEventListener('DOMContentLoaded', async () => {
     const newestVersion = await getOptionalVersionList();
-    console.log('Base Path:', basePath, 'Newest Version:', newestVersion);
-
-    const path = `/IAVFrontendFramework/packages/core/${newestVersion}/index.html`;
+    const path = `${basePath}/${newestVersion}/index.html`;
     pushWindowState(path);
 });
 
 const getOptionalVersionList = async () => {
-    const response = await fetch("../version-list.md");
+    const response = await fetch("./version-list.md");
     if (response.ok) {
         const data = await response.text();
         const versions = data.trim().split('\n');
@@ -40,5 +44,5 @@ const getOptionalVersionList = async () => {
 
 const pushWindowState = (path) => {
     const newUrl = new URL(path, window.location.origin);
-    window.location.href = newUrl.pathname + newUrl.search
+    window.location.href = newUrl.pathname + newUrl.search;
 };

@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import {ContentbarColorOptions} from "../colorOptionTypes";
+import { ContentbarColorOptions } from "@ff-test-modularization/frontend-framework-shared/colorOptionTypes";
 import {
   DARK_CONTENT_BAR_BACKGROUND_COLOR,
   DARK_CONTENT_BAR_BUTTON_DEFAULT_COLOR,

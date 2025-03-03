@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,8 +19,8 @@
 import React from "react";
 import {PropsWithChildren, useContext} from "react";
 import {useStyleMap} from "./style_options/useStyleMap";
-import {ColorSettingsContext} from "../../contexts/colorsettings";
 import {StyleProps, StylesArray} from "./style_options/styleTypes";
+import { ColorSettingsContext } from "@ff-test-modularization/frontend-framework-shared/colorSettingsContext";
 
 export const ContentStyleStyles = {
   WRAPPER_FULL_WIDTH: "WRAPPER_FULL_WIDTH",

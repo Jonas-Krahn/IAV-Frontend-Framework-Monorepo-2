@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,9 +21,19 @@ import {SvgIcon} from "../svgIcon";
 import {Tooltip} from "primereact/tooltip";
 import {NestedNavbarTabProps} from "./simpleNavbarTab";
 import "../tabs.css";
+import makeStyles from "../../../content/style_options/makeStyles";
+import {DefaultIcon} from "../defaultIcon";
+
+const useStyles = makeStyles(({iconColor}) => ({
+  icon: {
+    color: iconColor,
+  },
+}));
 
 export const SimpleNavbarTabCollapsed = (props: NestedNavbarTabProps) => {
   const ref = useRef<HTMLDivElement>(null);
+
+  const {classes} = useStyles({iconColor: props.iconColor});
 
   let className =
     "default-nav-element-collapsed default-tab-collapsed flex align-items-center justify-content-center";
@@ -40,7 +50,11 @@ export const SimpleNavbarTabCollapsed = (props: NestedNavbarTabProps) => {
       className={className}
       style={props.style}
     >
-      <SvgIcon color={props.iconColor} element={props.icon} />
+      {props.icon ? (
+        <SvgIcon color={props.iconColor} element={props.icon} />
+      ) : (
+        <DefaultIcon color={props.iconColor} />
+      )}
       <Tooltip content={props.name} target={ref} id="hover-image" />
     </div>
   );

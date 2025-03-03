@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,11 +18,10 @@
 
 import {SelectButton} from "primereact/selectbutton";
 import {useState} from "react";
-import {UILayer} from "@iavofficial/frontend-framework/uiLayer";
-import {TranslateFunctionType} from "@iavofficial/frontend-framework/translationFunction";
-import {BasicAuthenticationView} from "@iavofficial/frontend-framework/basicAuthenticationView";
-import {BasicContentWrapper} from "@iavofficial/frontend-framework/basicContentWrapper";
-import {Group} from "@iavofficial/frontend-framework/group";
+import {UILayer} from "@ff-test-modularization/frontend-framework/uiLayer";
+import {TranslateFunctionType} from "@ff-test-modularization/frontend-framework/translationFunction";
+import {BasicContentWrapper} from "@ff-test-modularization/frontend-framework/basicContentWrapper";
+import {Group} from "@ff-test-modularization/frontend-framework/group";
 import InfoIcon from "./assets/infoIcon.svg?react";
 import {LegalDocuments} from "./components/legalDocuments";
 import {ExampleComponent1} from "./components/exampleComponent1";
@@ -30,13 +29,15 @@ import {ExampleComponent6} from "./components/exampleComponent6";
 import {ExampleComponent3} from "./components/exampleComponent3";
 import {ExampleComponent4} from "./components/exampleComponent4";
 import {ExampleComponent5} from "./components/exampleComponent5";
-import {simpleNavbarTabFactory} from "@iavofficial/frontend-framework/simpleNavbarTabFactory";
-import {privilegedNavbarTabFactory} from "@iavofficial/frontend-framework/privilegedNavbarTabFactory";
+import {simpleNavbarTabFactory} from "@ff-test-modularization/frontend-framework/simpleNavbarTabFactory";
+import {privilegedNavbarTabFactory} from "@ff-test-modularization/frontend-framework/privilegedNavbarTabFactory";
 import {ExampleComponent2} from "./components/exampleComponent2";
-import {HeaderPanelElement} from "@iavofficial/frontend-framework/headerPanelElement";
+import {HeaderPanelElement} from "@ff-test-modularization/frontend-framework/headerPanelElement";
 import {PrimeIcons} from "primereact/api";
-import {WHITE} from "@iavofficial/frontend-framework/constants";
-import {HeaderMenuElement} from "@iavofficial/frontend-framework/headerMenuElement";
+import {WHITE} from "@ff-test-modularization/frontend-framework/constants";
+import {HeaderMenuElement} from "@ff-test-modularization/frontend-framework/headerMenuElement";
+import { ExampleComponent7 } from "./components/exampleComponent7";
+import { AwsAuthenticationView } from "./components/aws_example/store";
 
 function Layout() {
     const [selectedButtonOption, setSelectedButtonOption] = useState("Simulated");
@@ -66,6 +67,15 @@ function Layout() {
                 icon: <InfoIcon/>,
             }),
             ExampleComponent1
+        ),
+        new BasicContentWrapper(
+            "/2",
+            simpleNavbarTabFactory({
+                disabled: false,
+                name: "Example for Redux Store",
+                icon: <InfoIcon/>,
+            }),
+            ExampleComponent7
         ),
         new Group(
             (t: TranslateFunctionType) => t("Test_group_not_collapsible"),
@@ -220,20 +230,25 @@ function Layout() {
             />
         )
     ];
-
-    const appLogo = <span className="ml-3">Example application</span>;
-
+    
     return (
         <UILayer
+            authOptions={{
+                errorMessages: {
+                    passwordErrorMessage: "Invalid password. Please try again."
+                },
+            }}
             tabAndContentWrappers={views}
             startingPoint="/"
-            authenticationView={BasicAuthenticationView}
+            authenticationView={AwsAuthenticationView}
             settingsMenuOptions={settingsMenuOptions}
             documentsLabelKey="Legal_documents"
             documentsComponent={LegalDocuments}
             headerOptions={{
-                reactElementLeft: appLogo,
+                userIcon: <InfoIcon style={{backgroundColor: WHITE}}/>,
+                reactElementLeft: <span className="ml-3">Dev application</span>,
                 headerElements: headerElements,
+                hideUserIcon: false
             }}
         />
     );

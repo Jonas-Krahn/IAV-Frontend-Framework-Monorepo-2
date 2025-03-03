@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,11 +17,11 @@
  */
 
 import React, {useContext} from "react";
-import {AuthContext} from "../../../contexts/auth";
-import {containsOneOrMoreGroups} from "../../../utils/groupChecker";
 import {SimpleNavbarTab} from "./simpleNavbarTab/simpleNavbarTab";
 import {GroupableNavbarTab, NavbarTabProps} from "./typesNavbarTab";
 import {InjectedOptionsGroupableByWrapperToTab} from "../types/typesInjectedOptions";
+import { useDefaultSelector } from "../../../store";
+import {containsOneOrMoreGroups} from "@ff-test-modularization/frontend-framework-shared/containsOneOrMoreGroups";
 
 export interface Props {
   permittedGroups: string[];
@@ -30,10 +30,13 @@ export interface Props {
 export const PrivilegedNavbarTab: GroupableNavbarTab<Props> = (
   props: NavbarTabProps<InjectedOptionsGroupableByWrapperToTab> & Props,
 ) => {
-  const authContext = useContext(AuthContext);
+  const userData = useDefaultSelector(state => state.auth.userData);
+
+  const userGroups = userData?.userGroups ?? [];
+
   const permitted = containsOneOrMoreGroups(
-    authContext?.getUserGroups(),
-    props.permittedGroups,
+    userGroups,
+    props.permittedGroups
   );
   return permitted ? (
     <SimpleNavbarTab

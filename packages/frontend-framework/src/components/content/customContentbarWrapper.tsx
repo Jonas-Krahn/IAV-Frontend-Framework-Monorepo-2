@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,9 +17,9 @@
  */
 
 import React, {ReactElement} from "react";
-import {generateHashOfLength} from "../../utils/hash";
 import {ContentbarWrapperInterface} from "./contentbarWrapperInterface";
 import "./contentbar.css";
+import { generateHashOfLength } from "@ff-test-modularization/frontend-framework-shared/hash";
 
 export class CustomContentbarWrapper implements ContentbarWrapperInterface {
   constructor(

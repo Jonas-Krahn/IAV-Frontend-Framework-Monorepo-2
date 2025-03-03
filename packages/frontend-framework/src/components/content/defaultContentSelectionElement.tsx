@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,14 +17,14 @@
  */
 
 import React, {useContext, useState} from "react";
-import {DEFAULT_ELEMENTSIZE, GREY5, WHITE} from "../../constants";
-import {generateHashOfLength} from "../../utils/hash";
 import {Tooltip} from "primereact/tooltip";
 import "./contentbar.css";
-import {ColorSettingsContext} from "../../contexts/colorsettings";
 import {TranslationFunction} from "../../types/translationFunction";
 import {useTranslator} from "../internationalization/translators";
 import {determineCurrentColor} from "../../utils/determineCurrentColor";
+import {DEFAULT_ELEMENTSIZE, GREY5, WHITE} from "@ff-test-modularization/frontend-framework-shared/constants";
+import { ColorSettingsContext } from "@ff-test-modularization/frontend-framework-shared/colorSettingsContext";
+import { generateHashOfLength } from "@ff-test-modularization/frontend-framework-shared/hash";
 
 export interface Props {
   displayName: string | TranslationFunction;

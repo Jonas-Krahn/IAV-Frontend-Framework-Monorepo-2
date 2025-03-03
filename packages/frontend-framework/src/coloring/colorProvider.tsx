@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,14 +17,14 @@
  */
 
 import React, {useEffect, useState} from "react";
-import {ColorSettingsContext} from "../contexts/colorsettings";
 import {getCurrentColorsNavbar} from "./colorSelectors/getCurrentColorsNavbar";
 import {getCurrentColorsHeader} from "./colorSelectors/getCurrentColorsHeader";
 import {getCurrentColorsContentArea} from "./colorSelectors/getCurrentColorsContentArea";
 import {getCurrentColorsContentbar} from "./colorSelectors/getCurrentColorsContentbar";
 import {getCurrentColorsContentCell} from "./colorSelectors/getCurrentColorsContentCell";
 import {getCurrentColorsAuthenticationView} from "./colorSelectors/getCurrentColorsAuthenticationView";
-import {ColorOptions} from "./colorOptionTypes";
+import { ColorSettingsContext } from "@ff-test-modularization/frontend-framework-shared/colorSettingsContext";
+import { ColorOptions } from "@ff-test-modularization/frontend-framework-shared/colorOptionTypes";
 
 export interface ColorProviderProps {
   colorOptions?: ColorOptions;

@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,11 +16,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import {useTranslator} from "@iavofficial/frontend-framework/translators";
-import {ImprintText} from "@iavofficial/frontend-framework/imprint";
+import {useTranslator} from "@ff-test-modularization/frontend-framework/translators";
+import {ImprintText} from "@ff-test-modularization/frontend-framework/imprint";
 import {useContext} from "react";
-import {ColorSettingsContext} from "@iavofficial/frontend-framework/colorSettingsContext";
-import "@iavofficial/frontend-framework/globalColors.css";
+import {ColorSettingsContext} from "@ff-test-modularization/frontend-framework/colorSettingsContext";
 
 export const LegalDocuments = () => {
     const t = useTranslator();

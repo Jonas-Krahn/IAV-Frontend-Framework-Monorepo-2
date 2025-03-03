@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from "react";
+import React, {useContext} from "react";
 import {Header, HeaderOptions} from "./header/header";
 import {Navbar} from "./navbar/navbar";
 import {DefaultImprint} from "./imprint/defaultImprint";
@@ -24,6 +24,8 @@ import {SettingsMenuOptions} from "./header/settingsMenu";
 import {Outlet, Route, Routes} from "react-router-dom";
 import {TabAndContentWrapper} from "./navbar/wrappers/typesWrappers";
 import {UserMenuOptions} from "./header/userMenu";
+import If from "./helper/If";
+import { ColorSettingsContext } from "@ff-test-modularization/frontend-framework-shared/colorSettingsContext";
 
 interface MainViewProps {
   tabAndContentWrappers: TabAndContentWrapper[];
@@ -33,9 +35,15 @@ interface MainViewProps {
   headerOptions?: HeaderOptions;
   settingsMenuOptions?: SettingsMenuOptions;
   userMenuOptions?: UserMenuOptions;
+  hideNavbar?: boolean;
 }
 
 export const MainView = (props: MainViewProps) => {
+  const colorSettingsContext = useContext(ColorSettingsContext);
+
+  const contentAreaBackground =
+    colorSettingsContext.currentColors.contentArea.backgroundColor;
+
   return (
     <div
       style={{
@@ -52,12 +60,21 @@ export const MainView = (props: MainViewProps) => {
           userMenuOptions={props.userMenuOptions}
         />
       </div>
-      <div style={{display: "flex", flex: "1 1 auto", overflow: "auto"}}>
-        <Navbar
-          tabAndContentWrappers={props.tabAndContentWrappers}
-          documentsLabelKey={props.documentsLabelKey}
-          hideLegalDocuments={props.hideLegalDocuments}
-        />
+      <div
+        style={{
+          display: "flex",
+          flex: "1 1 auto",
+          overflow: "auto",
+          background: contentAreaBackground,
+        }}
+      >
+        <If condition={!props.hideNavbar}>
+          <Navbar
+            tabAndContentWrappers={props.tabAndContentWrappers}
+            documentsLabelKey={props.documentsLabelKey}
+            hideLegalDocuments={props.hideLegalDocuments}
+          />
+        </If>
         <Outlet />
         <Routes>
           {props.tabAndContentWrappers.map((wrapper) => wrapper.getRoutes())}

@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +20,10 @@ import React, {useContext, useState} from "react";
 import {Dialog} from "primereact/dialog";
 import {Button} from "primereact/button";
 import {useCookies} from "react-cookie";
+import {useCookiesAccepted} from "./cookieHooks";
+import {useTranslator} from "../internationalization/translators";
+import {setAcceptCookies} from "../../utils/setAcceptCookies";
+import makeStyles from "../content/style_options/makeStyles";
 import {
   ACCEPTED_COOKIES_NAME,
   BLACK,
@@ -29,12 +33,8 @@ import {
   GREY5,
   GREY6,
   WHITE,
-} from "../../constants";
-import {useCookiesAccepted} from "./cookieHooks";
-import {useTranslator} from "../internationalization/translators";
-import {setAcceptCookies} from "../../utils/setAcceptCookies";
-import {ColorSettingsContext} from "../../contexts/colorsettings";
-import makeStyles from "../content/style_options/makeStyles";
+} from "@ff-test-modularization/frontend-framework-shared/constants";
+import { ColorSettingsContext } from "@ff-test-modularization/frontend-framework-shared/colorSettingsContext";
 
 const useStyles = makeStyles(({darkMode}: {darkMode: boolean}) => ({
   dialog: {

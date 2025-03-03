@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,6 @@
 import React, {ReactElement, useContext, useEffect, useState} from "react";
 import "../../navbar.css";
 import {useTranslator} from "../../../internationalization/translators";
-import {ColorSettingsContext} from "../../../../contexts/colorsettings";
 import {TranslateFunctionType} from "../../../../types/translationFunction";
 import {TabGroupCollapsed} from "./tabGroupCollapsed";
 import {TabGroupUnfolded} from "./tabGroupUnfolded";
@@ -32,7 +31,8 @@ import {
 import {
   DEFAULT_ELEMENTSIZE,
   NAVBAR_WIDTH_UNFOLDED,
-} from "../../../../constants";
+} from "@ff-test-modularization/frontend-framework-shared/constants";
+import { ColorSettingsContext } from "@ff-test-modularization/frontend-framework-shared/colorSettingsContext";
 
 interface Props {
   name: string | ((t: TranslateFunctionType) => string);

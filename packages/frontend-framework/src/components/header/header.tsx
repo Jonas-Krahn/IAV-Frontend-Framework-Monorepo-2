@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,23 +18,34 @@
 
 import React, {ReactElement, useContext} from "react";
 import "./header.css";
-import "../css/globalColors.css";
 import {ContextMenu} from "primereact/contextmenu";
 import UserIcon from "../../assets/svg/userIcon";
 import CompanyLogo from "../../assets/svg/companyLogo";
 import SettingsIcon from "../../assets/svg/settingsIcon";
-import {BLUE3, PADDING_GAB, WHITE} from "../../constants";
 import {SettingsMenu, SettingsMenuOptions} from "./settingsMenu";
 import {UserMenu, UserMenuOptions} from "./userMenu";
-import {ColorSettingsContext} from "../../contexts/colorsettings";
-import {AppLogoPlaceholder} from "../appLogoPlaceholder";
 import HeaderIcon from "./headerIcon";
+import makeStyles from "../content/style_options/makeStyles";
+import {APPLICATION_LOGO_PLACEHOLDER, BLUE3, PADDING_GAB, WHITE} from "@ff-test-modularization/frontend-framework-shared/constants";
+import { ColorSettingsContext } from "@ff-test-modularization/frontend-framework-shared/colorSettingsContext";
+import { AppLogoPlaceholder } from "@ff-test-modularization/frontend-framework-shared/appLogoPlaceholder";
+
+const useStyles = makeStyles(() => ({
+  wrapper: {
+    width: 31.666,
+    height: 31.666,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+}));
 
 export interface HeaderOptions {
   reactElementRight?: ReactElement;
   reactElementLeft?: ReactElement;
   hideLeft?: boolean;
   hideRight?: boolean;
+  userIcon: ReactElement;
   hideUserIcon?: boolean;
   headerElements?: ReactElement[];
 }
@@ -49,6 +60,8 @@ export const Header = (props: Props) => {
   const menuRef = React.createRef<ContextMenu>();
   const userRef = React.createRef<ContextMenu>();
   const colorSettingsContext = useContext(ColorSettingsContext);
+
+  const {classes} = useStyles();
 
   const headerBackgroundColor =
     colorSettingsContext.currentColors.header.backgroundColor;
@@ -95,7 +108,7 @@ export const Header = (props: Props) => {
         {props.headerOptions?.reactElementLeft ? (
           props.headerOptions?.reactElementLeft
         ) : (
-          <AppLogoPlaceholder />
+          <AppLogoPlaceholder appLogoPlaceholder={APPLICATION_LOGO_PLACEHOLDER} />
         )}
       </div>
 
@@ -140,9 +153,14 @@ export const Header = (props: Props) => {
             }}
             onKeyDown={(e) => hideUserMenu(e)}
           >
-            {!props.headerOptions?.hideUserIcon && (
-              <UserIcon fill={userIconColor} />
-            )}
+            {!props.headerOptions?.hideUserIcon &&
+              (props.headerOptions?.userIcon ? (
+                <div className={classes.wrapper}>
+                  {props.headerOptions.userIcon}
+                </div>
+              ) : (
+                <UserIcon fill={userIconColor} />
+              ))}
           </HeaderIcon>
         </div>
         <div

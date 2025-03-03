@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,8 +18,9 @@
 
 import React, {useContext} from "react";
 import {ContextMenu} from "primereact/contextmenu";
-import {AuthContext} from "../../contexts/auth";
 import {MenuItem} from "./settingsMenu";
+import { useDefaultDispatch } from "../../store";
+import { ModuleContext } from "@ff-test-modularization/frontend-framework-shared/moduleContext";
 
 export interface Props {
   hideMenu: (e: React.KeyboardEvent) => void;
@@ -33,7 +34,10 @@ export interface UserMenuOptions {
 
 //eslint-disable-next-line
 export const UserMenu = React.forwardRef<ContextMenu, Props>((props, ref) => {
-  const authContext = useContext(AuthContext);
+  const moduleContext = useContext(ModuleContext);
+
+  const dispatch = useDefaultDispatch();
+
   const basicOptions: MenuItem[] = [];
 
   if (!props.userMenuOptions?.hideLogoutButton) {
@@ -41,7 +45,7 @@ export const UserMenu = React.forwardRef<ContextMenu, Props>((props, ref) => {
       label: "Logout",
       icon: "pi pi-sign-out",
       command: () => {
-        authContext?.logout();
+        dispatch(moduleContext.modules.auth.logout());
       },
     });
   }

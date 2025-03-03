@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,22 +19,21 @@
 import React, {useContext} from "react";
 import {Link} from "react-router-dom";
 import "./navbar.css";
-import "../css/globalColors.css";
 import {TabAndContentWrapper} from "./wrappers/typesWrappers";
 import {useTranslator} from "../internationalization/translators";
 import {Tooltip} from "primereact/tooltip";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
-import {ColorSettingsContext} from "../../contexts/colorsettings";
 import {calculateNavbarArrowFunctionColor} from "../../utils/calculateNavbarArrowColor";
-import {generateHashOfLength} from "../../utils/hash";
 import {NavbarSettingsContext} from "../../contexts/navbarContext";
 import {
   DEFAULT_ELEMENTSIZE,
   GAB_NAVBAR_COLLAPSED,
   NAVBAR_WIDTH_UNFOLDED,
   PADDING_GAB,
-} from "../../constants";
+} from "@ff-test-modularization/frontend-framework-shared/constants";
+import { ColorSettingsContext } from "@ff-test-modularization/frontend-framework-shared/colorSettingsContext";
+import { generateHashOfLength } from "@ff-test-modularization/frontend-framework-shared/hash";
 
 interface Props {
   tabAndContentWrappers: TabAndContentWrapper[];

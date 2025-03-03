@@ -1,5 +1,5 @@
 /**
- * Copyright © 2024 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
+ * Copyright © 2025 IAV GmbH Ingenieurgesellschaft Auto und Verkehr, All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,16 +23,15 @@ import React, {
   useRef,
   useState,
 } from "react";
-import "../css/globalColors.css";
-import {ColorSettingsContext} from "../../contexts/colorsettings";
 import {BasicContentbarWrapper} from "./basicContentbarWrapper";
 import {CustomContentbarWrapper} from "./customContentbarWrapper";
 import {NavbarSettingsContext} from "../../contexts/navbarContext";
 import {calculateWidth} from "../../utils/calculateWidth";
 import {ContentBarButtonElement} from "./contentBarButtonElement";
-import {DEFAULT_ELEMENTSIZE, PADDING_GAB} from "../../constants";
 import {useStyleMap} from "./style_options/useStyleMap";
 import {StyleProps, StylesArray} from "./style_options/styleTypes";
+import { ColorSettingsContext } from "@ff-test-modularization/frontend-framework-shared/colorSettingsContext";
+import {DEFAULT_ELEMENTSIZE, PADDING_GAB} from "@ff-test-modularization/frontend-framework-shared/constants";
 
 export const ContentBarStyles = {
   SPACING: "SPACING",
@@ -87,7 +86,7 @@ export const ContentBar = (props: PropsContentBar) => {
   const styleDependencies = {
     [ContentBarStyles.SET_SPACING_COLOR]: [ContentBarStyles.SPACING],
   };
-  //@ts-ignore
+  
   const [classNames, styles] = useStyleMap(
     classesMap,
     stylesMap,
