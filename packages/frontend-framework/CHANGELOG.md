@@ -1,3 +1,9 @@
+## @ff-test-modularization/frontend-framework-v1.0.0 (2025-03-03)
+
+### Features
+
+* Test mod ([09a669b](https://github.com/Jonas-Krahn/IAV-Frontend-Framework-Monorepo-2/commit/09a669b3f80040b4c1a76bb18b31e004c29b4392))
+
 ## [@ff-test-modularization/frontend-framework-v1.4.0-dev.2](https://github.com/iavofficial/IAVFrontendFramework/compare/@ff-test-modularization/frontend-framework-v1.4.0-dev.1...@ff-test-modularization/frontend-framework-v1.4.0-dev.2) (2025-02-20)
 
 ### Bug Fixes
