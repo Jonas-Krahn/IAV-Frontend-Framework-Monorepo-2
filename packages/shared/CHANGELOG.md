@@ -1,3 +1,9 @@
+## [@iav-ff-test-2/frontend-framework-shared-v1.2.0](https://github.com/Jonas-Krahn/IAV-Frontend-Framework-Monorepo-2/compare/@iav-ff-test-2/frontend-framework-shared-v1.1.0...@iav-ff-test-2/frontend-framework-shared-v1.2.0) (2025-03-05)
+
+### Features
+
+* Test Release 3 ([1e5cb27](https://github.com/Jonas-Krahn/IAV-Frontend-Framework-Monorepo-2/commit/1e5cb27dba91ef665b5053de9d436ebda80d4af5))
+
 ## [@iav-ff-test-2/frontend-framework-shared-v1.1.0](https://github.com/Jonas-Krahn/IAV-Frontend-Framework-Monorepo-2/compare/@iav-ff-test-2/frontend-framework-shared-v1.0.0...@iav-ff-test-2/frontend-framework-shared-v1.1.0) (2025-03-05)
 
 ### Features
