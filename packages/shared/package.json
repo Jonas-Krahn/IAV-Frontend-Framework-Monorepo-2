@@ -72,16 +72,12 @@
     "./authenticationView.css": "./dist/css/authenticationView.css",
     "./constants": "./dist/constants/constants.js",
     "./mandatoryModuleNames": "./dist/constants/auth/mandatoryModuleNames.js",
-
     "./module": "./dist/types/modules/module.js",
     "./authenticationProvider": "./dist/types/modules/auth/authenticationProvider.js",
     "./authenticationViewProps": "./dist/types/modules/auth/authenticationViewProps.js",
-
     "./colorOptionTypes": "./dist/types/color/colorOptionTypes.js",
-
     "./requiredMutable": "./dist/types/util-types/requiredMutable.js",
     "./componentTypeMinProps": "./dist/types/util-types/componentTypeMinProps.js",
-
     "./containsOneOrMoreGroups": "./dist/utils/auth/containsOneOrMoreGroups.js",
     "./parseLanguageResourcesIntoDropdownFormat": "./dist/utils/internationalization/parseLanguageResourcesIntoDropdownFormat.js",
     "./hash": "./dist/utils/hash.js"
@@ -106,37 +102,33 @@
       "./mandatoryModuleNames": [
         "./dist/constants/auth/mandatoryModuleNames.d.ts"
       ],
-
       "./module": [
-          "./dist/types/modules/module.d.ts"
-        ],
-        "./authenticationProvider": [
-          "./dist/types/modules/auth/authenticationProvider.d.ts"
-        ],
-        "./authenticationViewProps": [
-          "./dist/types/modules/auth/authenticationViewProps.d.ts"
-        ],
-  
-        "./colorOptionTypes": [
-          "./dist/types/color/colorOptionTypes.d.ts"
-        ],
-  
-        "./requiredMutable": [
-          "./dist/types/util-types/requiredMutable.d.ts"
-        ],
-        "./componentTypeMinProps": [
-          "./dist/types/util-types/componentTypeMinProps.d.ts"
-        ],
-
-        "./containsOneOrMoreGroups": [
-          "./dist/utils/auth/containsOneOrMoreGroups.d.ts"
-        ],
-        "./parseLanguageResourcesIntoDropdownFormat": [
-          "./dist/utils/internationalization/parseLanguageResourcesIntoDropdownFormat.d.ts"
-        ],
-        "./hash": [
-          "./dist/utils/hash.d.ts"
-        ]
+        "./dist/types/modules/module.d.ts"
+      ],
+      "./authenticationProvider": [
+        "./dist/types/modules/auth/authenticationProvider.d.ts"
+      ],
+      "./authenticationViewProps": [
+        "./dist/types/modules/auth/authenticationViewProps.d.ts"
+      ],
+      "./colorOptionTypes": [
+        "./dist/types/color/colorOptionTypes.d.ts"
+      ],
+      "./requiredMutable": [
+        "./dist/types/util-types/requiredMutable.d.ts"
+      ],
+      "./componentTypeMinProps": [
+        "./dist/types/util-types/componentTypeMinProps.d.ts"
+      ],
+      "./containsOneOrMoreGroups": [
+        "./dist/utils/auth/containsOneOrMoreGroups.d.ts"
+      ],
+      "./parseLanguageResourcesIntoDropdownFormat": [
+        "./dist/utils/internationalization/parseLanguageResourcesIntoDropdownFormat.d.ts"
+      ],
+      "./hash": [
+        "./dist/utils/hash.d.ts"
+      ]
     }
   },
   "publishConfig": {
