@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: '22.x'
 
-      - run: chmod +x ./scripts/unix/*
+      - run: chmod -R +x ./main/scripts/unix
 
       # Install Turborepo
       - run: npm i
@@ -69,7 +69,7 @@ jobs:
           mkdir main
           git archive --format=tar main | tar -x -C main
       
-      - run: chmod +x ./main/scripts/unix/*
+      - run: chmod -R +x ./main/scripts/unix
                 
       - name: Generate docs
         run: |
