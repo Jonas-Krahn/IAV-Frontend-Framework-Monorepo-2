@@ -23,7 +23,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22.x'
-          
+
+      - run: chmod +x ./main/scripts/unix/*
+      
       # Install Turborepo
       - run: npm i
       
@@ -71,9 +73,9 @@ jobs:
                 
       - name: Generate docs
         run: |
-          ./main/scripts/unix/copy-additional-files.sh
+          ./main/scripts/unix/docs_generation/copy-additional-files.sh
           cd main
           npm i
           npm run generate-docs
           cd ..
-          ./main/scripts/unix/process-and-commit-docs.sh
+          ./main/scripts/unix/docs_generation/process-and-commit-docs.sh
