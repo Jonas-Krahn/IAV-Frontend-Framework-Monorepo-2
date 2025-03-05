@@ -305,5 +305,3 @@ export type DefaultThunkDispatch = ThunkDispatch<
 export const useDefaultDispatch: () => DefaultThunkDispatch = useDispatch;
 export const useDefaultSelector: TypedUseSelectorHook<DefaultRootState> =
   useSelector;
-
-// TEST RELEASE
