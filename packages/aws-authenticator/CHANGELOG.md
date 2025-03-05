@@ -1,3 +1,9 @@
+## [@iav-ff-test-2/frontend-framework-aws-authenticator-v1.1.0](https://github.com/Jonas-Krahn/IAV-Frontend-Framework-Monorepo-2/compare/@iav-ff-test-2/frontend-framework-aws-authenticator-v1.0.0...@iav-ff-test-2/frontend-framework-aws-authenticator-v1.1.0) (2025-03-05)
+
+### Features
+
+* Test Release ([f161d00](https://github.com/Jonas-Krahn/IAV-Frontend-Framework-Monorepo-2/commit/f161d00a21143e1746f0c3c11d13df0e38f02deb))
+
 ## @iav-ff-test-2/frontend-framework-aws-authenticator-v1.0.0 (2025-03-05)
 
 ### Features
