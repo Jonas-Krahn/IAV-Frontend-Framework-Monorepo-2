@@ -24,8 +24,8 @@ jobs:
         with:
           node-version: '22.x'
 
-      - run: chmod +x ./main/scripts/unix/*
-      
+      - run: chmod +x ./scripts/unix/*
+
       # Install Turborepo
       - run: npm i
       
