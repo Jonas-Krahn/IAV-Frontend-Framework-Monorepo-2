@@ -31,9 +31,9 @@ import {
   GAB_NAVBAR_COLLAPSED,
   NAVBAR_WIDTH_UNFOLDED,
   PADDING_GAB,
-} from "@iav-ff-test-1/frontend-framework-shared/constants";
-import { ColorSettingsContext } from "@iav-ff-test-1/frontend-framework-shared/colorSettingsContext";
-import { generateHashOfLength } from "@iav-ff-test-1/frontend-framework-shared/hash";
+} from "@iav-ff-test-2/frontend-framework-shared/constants";
+import { ColorSettingsContext } from "@iav-ff-test-2/frontend-framework-shared/colorSettingsContext";
+import { generateHashOfLength } from "@iav-ff-test-2/frontend-framework-shared/hash";
 
 interface Props {
   tabAndContentWrappers: TabAndContentWrapper[];

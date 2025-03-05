@@ -29,8 +29,8 @@ import {EnhancedStore} from "@reduxjs/toolkit";
 import {Provider} from "react-redux";
 import {FFMandatoryModules, FFMandatoryState} from "../store";
 import {ModuleContextProvider} from "../contexts/providers/moduleContextProvider";
-import {DEFAULT_FALLBACK_LANGUAGE} from "@iav-ff-test-1/frontend-framework-shared/constants";
-import {AuthState} from "@iav-ff-test-1/frontend-framework-shared/authenticationProvider";
+import {DEFAULT_FALLBACK_LANGUAGE} from "@iav-ff-test-2/frontend-framework-shared/constants";
+import {AuthState} from "@iav-ff-test-2/frontend-framework-shared/authenticationProvider";
 
 // Create this type to make fallbackLang optional for the user.
 type GlobalDataLayerLanguageOptions = Omit<LanguageOptions, "fallbackLang"> & {

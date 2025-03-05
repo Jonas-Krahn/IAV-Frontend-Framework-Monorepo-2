@@ -19,8 +19,8 @@
 import React from "react";
 import {PropsWithChildren} from "react";
 import {FFMandatoryModules} from "../../store";
-import { ModuleContext } from "@iav-ff-test-1/frontend-framework-shared/moduleContext";
-import { AuthState } from "@iav-ff-test-1/frontend-framework-shared/authenticationProvider";
+import { ModuleContext } from "@iav-ff-test-2/frontend-framework-shared/moduleContext";
+import { AuthState } from "@iav-ff-test-2/frontend-framework-shared/authenticationProvider";
 
 export interface Props<TAuthState extends AuthState> {
   modules: FFMandatoryModules<TAuthState>;

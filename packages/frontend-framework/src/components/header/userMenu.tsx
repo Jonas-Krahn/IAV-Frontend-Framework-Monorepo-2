@@ -20,7 +20,7 @@ import React, {useContext} from "react";
 import {ContextMenu} from "primereact/contextmenu";
 import {MenuItem} from "./settingsMenu";
 import { useDefaultDispatch } from "../../store";
-import { ModuleContext } from "@iav-ff-test-1/frontend-framework-shared/moduleContext";
+import { ModuleContext } from "@iav-ff-test-2/frontend-framework-shared/moduleContext";
 
 export interface Props {
   hideMenu: (e: React.KeyboardEvent) => void;

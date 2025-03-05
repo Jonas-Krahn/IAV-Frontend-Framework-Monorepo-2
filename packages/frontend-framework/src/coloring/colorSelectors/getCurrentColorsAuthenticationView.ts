@@ -16,7 +16,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { AuthenticationViewColorOptions } from "@iav-ff-test-1/frontend-framework-shared/colorOptionTypes";
+import { AuthenticationViewColorOptions } from "@iav-ff-test-2/frontend-framework-shared/colorOptionTypes";
 import {
   DARK_AUTH_COMPANY_TEXT_COLOR,
   DARK_AUTH_FULL_SCREEN_BACKGROUND_COLOR,

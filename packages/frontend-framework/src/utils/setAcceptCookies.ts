@@ -16,7 +16,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import {ACCEPTED_COOKIES_NAME} from "@iav-ff-test-1/frontend-framework-shared/constants";
+import {ACCEPTED_COOKIES_NAME} from "@iav-ff-test-2/frontend-framework-shared/constants";
 
 export const setAcceptCookies = (
   setCookie: (name: "acceptedCookies", value: any, options?: any) => void,

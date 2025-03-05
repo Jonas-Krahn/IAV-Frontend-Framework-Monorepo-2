@@ -27,9 +27,9 @@ import {
 } from "@reduxjs/toolkit";
 import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
 import {DummyAuthenticator} from "./components/authentication/default/dummyAuthenticationProvider";
-import { MandatoryModuleNames } from "@iav-ff-test-1/frontend-framework-shared/mandatoryModuleNames";
-import { AuthModule, AuthState } from "@iav-ff-test-1/frontend-framework-shared/authenticationProvider";
-import { FFStoreModule } from "@iav-ff-test-1/frontend-framework-shared/module";
+import { MandatoryModuleNames } from "@iav-ff-test-2/frontend-framework-shared/mandatoryModuleNames";
+import { AuthModule, AuthState } from "@iav-ff-test-2/frontend-framework-shared/authenticationProvider";
+import { FFStoreModule } from "@iav-ff-test-2/frontend-framework-shared/module";
 
 const executeProcessorsForModules = <TModules extends object>(
   modulesAndProcessors: ModuleAndProcessorMap<TModules>,

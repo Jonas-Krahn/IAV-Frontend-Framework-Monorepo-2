@@ -16,7 +16,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import {CellPaddings, ContentCell} from "@iav-ff-test-1/frontend-framework/contentCell";
+import {CellPaddings, ContentCell} from "@iav-ff-test-2/frontend-framework/contentCell";
 import {Button} from "primereact/button";
 import {useState} from "react";
 

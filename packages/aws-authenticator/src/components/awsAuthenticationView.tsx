@@ -18,14 +18,14 @@
 
 import React, {FormEvent, useContext, useState} from "react";
 import {Link} from "react-router-dom";
-import {useTranslator} from "@iav-ff-test-1/frontend-framework/translators";
-import {AuthenticationViewProps} from "@iav-ff-test-1/frontend-framework-shared/authenticationViewProps";
+import {useTranslator} from "@iav-ff-test-2/frontend-framework/translators";
+import {AuthenticationViewProps} from "@iav-ff-test-2/frontend-framework-shared/authenticationViewProps";
 import loginBackgroundLightMode from "../assets/png/login_background_lightMode.png";
 import loginBackgroundDarkMode from "../assets/png/login_background_darkMode.png";
 import {Dropdown, DropdownChangeEvent} from "primereact/dropdown";
-import {LanguageContext} from "@iav-ff-test-1/frontend-framework/language";
-import {parseLanguageResourcesIntoDropdownFormat} from "@iav-ff-test-1/frontend-framework-shared/parseLanguageResourcesIntoDropdownFormat";
-import {generateHashOfLength} from "@iav-ff-test-1/frontend-framework-shared/hash";
+import {LanguageContext} from "@iav-ff-test-2/frontend-framework/language";
+import {parseLanguageResourcesIntoDropdownFormat} from "@iav-ff-test-2/frontend-framework-shared/parseLanguageResourcesIntoDropdownFormat";
+import {generateHashOfLength} from "@iav-ff-test-2/frontend-framework-shared/hash";
 import {Tooltip} from "primereact/tooltip";
 import CompanyLogo from "../assets/svg/companyLogo";
 import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
@@ -34,16 +34,16 @@ import {
   AWSAuthenticator,
   AWSAuthenticatorStoreState,
 } from "../awsAuthenticatorModule";
-import {ColorSettingsContext} from "@iav-ff-test-1/frontend-framework-shared/colorSettingsContext";
-import {LoginButtonWithSpinner} from "@iav-ff-test-1/frontend-framework-shared/loginButtonWithSpinner";
-import {AppLogoPlaceholder} from "@iav-ff-test-1/frontend-framework-shared/appLogoPlaceholder";
-import {MandatoryModuleNames} from "@iav-ff-test-1/frontend-framework-shared/mandatoryModuleNames";
+import {ColorSettingsContext} from "@iav-ff-test-2/frontend-framework-shared/colorSettingsContext";
+import {LoginButtonWithSpinner} from "@iav-ff-test-2/frontend-framework-shared/loginButtonWithSpinner";
+import {AppLogoPlaceholder} from "@iav-ff-test-2/frontend-framework-shared/appLogoPlaceholder";
+import {MandatoryModuleNames} from "@iav-ff-test-2/frontend-framework-shared/mandatoryModuleNames";
 import {
   APPLICATION_LOGO_PLACEHOLDER,
   BLUE3,
   PADDING_GAB,
   WHITE,
-} from "@iav-ff-test-1/frontend-framework-shared/constants";
+} from "@iav-ff-test-2/frontend-framework-shared/constants";
 
 interface AWSAuthenticationViewProps extends AuthenticationViewProps {
   module: AWSAuthenticator;

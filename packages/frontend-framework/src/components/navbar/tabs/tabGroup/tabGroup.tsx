@@ -31,8 +31,8 @@ import {
 import {
   DEFAULT_ELEMENTSIZE,
   NAVBAR_WIDTH_UNFOLDED,
-} from "@iav-ff-test-1/frontend-framework-shared/constants";
-import { ColorSettingsContext } from "@iav-ff-test-1/frontend-framework-shared/colorSettingsContext";
+} from "@iav-ff-test-2/frontend-framework-shared/constants";
+import { ColorSettingsContext } from "@iav-ff-test-2/frontend-framework-shared/colorSettingsContext";
 
 interface Props {
   name: string | ((t: TranslateFunctionType) => string);
