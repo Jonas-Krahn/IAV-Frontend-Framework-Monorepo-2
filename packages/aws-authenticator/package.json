@@ -1,12 +1,12 @@
 {
-  "name": "@ff-test-modularization/frontend-framework-aws-authenticator",
+  "name": "@iav-ff-test-1/frontend-framework-aws-authenticator",
   "version": "1.0.0",
   "private": false,
   "license": "Apache-2.0",
   "description": "This package provides AWS authentication using AWS Cognito.",
   "scripts": {
     "setup": "npm i",
-    "build": "npx babel ./src --out-dir ./dist --extensions .ts,.tsx --copy-files && npx babel ./package.json --out-dir ./dist --copy-files && npx babel ./SBOM.spdx --out-dir ./dist --copy-files && npx babel ./LICENSE --out-dir ./dist --copy-files && npx babel ./NOTICE.md --out-dir ./dist --copy-files && npx tsc --outDir ./dist",
+    "build": "cross-env-shell \"../../scripts/unix/packages/build.sh || echo \"Not implemented yet.\"",
     "build-live": "cross-env-shell \"..\\..\\scripts\\win\\build-live.bat || echo \"Not implemented yet.\"",
     "test": "jest --passWithNoTests",
     "lint": "eslint src/**/*.{js,ts,tsx}",
@@ -36,8 +36,8 @@
     "aws authenticator"
   ],
   "dependencies": {
-    "@ff-test-modularization/frontend-framework": "*",
-    "@ff-test-modularization/frontend-framework-shared": "*",
+    "@iav-ff-test-1/frontend-framework": "*",
+    "@iav-ff-test-1/frontend-framework-shared": "*",
     "@reduxjs/toolkit": "^2.5.1",
     "react-redux": "^9.2.0"
   },

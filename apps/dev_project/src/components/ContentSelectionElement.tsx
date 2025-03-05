@@ -17,7 +17,7 @@
  */
 
 import {useState} from 'react';
-import {BLUE3, GREY2, WHITE} from '@ff-test-modularization/frontend-framework/constants';
+import {BLUE3, GREY2, WHITE} from '@iav-ff-test-1/frontend-framework/constants';
 
 interface Props {
     selected: boolean;

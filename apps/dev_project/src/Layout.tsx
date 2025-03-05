@@ -18,10 +18,10 @@
 
 import {SelectButton} from "primereact/selectbutton";
 import {useState} from "react";
-import {UILayer} from "@ff-test-modularization/frontend-framework/uiLayer";
-import {TranslateFunctionType} from "@ff-test-modularization/frontend-framework/translationFunction";
-import {BasicContentWrapper} from "@ff-test-modularization/frontend-framework/basicContentWrapper";
-import {Group} from "@ff-test-modularization/frontend-framework/group";
+import {UILayer} from "@iav-ff-test-1/frontend-framework/uiLayer";
+import {TranslateFunctionType} from "@iav-ff-test-1/frontend-framework/translationFunction";
+import {BasicContentWrapper} from "@iav-ff-test-1/frontend-framework/basicContentWrapper";
+import {Group} from "@iav-ff-test-1/frontend-framework/group";
 import InfoIcon from "./assets/infoIcon.svg?react";
 import {LegalDocuments} from "./components/legalDocuments";
 import {ExampleComponent1} from "./components/exampleComponent1";
@@ -29,13 +29,13 @@ import {ExampleComponent6} from "./components/exampleComponent6";
 import {ExampleComponent3} from "./components/exampleComponent3";
 import {ExampleComponent4} from "./components/exampleComponent4";
 import {ExampleComponent5} from "./components/exampleComponent5";
-import {simpleNavbarTabFactory} from "@ff-test-modularization/frontend-framework/simpleNavbarTabFactory";
-import {privilegedNavbarTabFactory} from "@ff-test-modularization/frontend-framework/privilegedNavbarTabFactory";
+import {simpleNavbarTabFactory} from "@iav-ff-test-1/frontend-framework/simpleNavbarTabFactory";
+import {privilegedNavbarTabFactory} from "@iav-ff-test-1/frontend-framework/privilegedNavbarTabFactory";
 import {ExampleComponent2} from "./components/exampleComponent2";
-import {HeaderPanelElement} from "@ff-test-modularization/frontend-framework/headerPanelElement";
+import {HeaderPanelElement} from "@iav-ff-test-1/frontend-framework/headerPanelElement";
 import {PrimeIcons} from "primereact/api";
-import {WHITE} from "@ff-test-modularization/frontend-framework/constants";
-import {HeaderMenuElement} from "@ff-test-modularization/frontend-framework/headerMenuElement";
+import {WHITE} from "@iav-ff-test-1/frontend-framework/constants";
+import {HeaderMenuElement} from "@iav-ff-test-1/frontend-framework/headerMenuElement";
 import { ExampleComponent7 } from "./components/exampleComponent7";
 import { AwsAuthenticationView } from "./components/aws_example/store";
 

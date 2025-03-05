@@ -16,4 +16,4 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-export * from "@ff-test-modularization/frontend-framework-shared/moduleContext";
+export * from "@iav-ff-test-1/frontend-framework-shared/moduleContext";

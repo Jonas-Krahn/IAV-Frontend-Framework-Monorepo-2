@@ -26,7 +26,7 @@ import {
   GREY6,
   GREY_MENU_SPECIAL_1,
   WHITE,
-} from "@ff-test-modularization/frontend-framework-shared/constants";
+} from "@iav-ff-test-1/frontend-framework-shared/constants";
 
 //. Header
 export const LIGHT_HEADER_BACKGROUND_COLOR = BLUE0;

@@ -21,7 +21,7 @@ import {SimpleNavbarTab} from "./simpleNavbarTab/simpleNavbarTab";
 import {GroupableNavbarTab, NavbarTabProps} from "./typesNavbarTab";
 import {InjectedOptionsGroupableByWrapperToTab} from "../types/typesInjectedOptions";
 import { useDefaultSelector } from "../../../store";
-import {containsOneOrMoreGroups} from "@ff-test-modularization/frontend-framework-shared/containsOneOrMoreGroups";
+import {containsOneOrMoreGroups} from "@iav-ff-test-1/frontend-framework-shared/containsOneOrMoreGroups";
 
 export interface Props {
   permittedGroups: string[];

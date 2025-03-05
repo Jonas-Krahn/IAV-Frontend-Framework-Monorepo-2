@@ -16,16 +16,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import {useTranslator} from "@ff-test-modularization/frontend-framework/translators";
-import {BLUE3, WHITE} from "@ff-test-modularization/frontend-framework/constants";
-import {CellPaddings, ContentCell} from "@ff-test-modularization/frontend-framework/contentCell";
+import {useTranslator} from "@iav-ff-test-1/frontend-framework/translators";
+import {BLUE3, WHITE} from "@iav-ff-test-1/frontend-framework/constants";
+import {CellPaddings, ContentCell} from "@iav-ff-test-1/frontend-framework/contentCell";
 import {
     ContentLayout,
     LayoutBehaviour,
-} from "@ff-test-modularization/frontend-framework/contentLayout";
+} from "@iav-ff-test-1/frontend-framework/contentLayout";
 import {Button} from "primereact/button";
 import {useState} from "react";
-import {ContentStyleTemplates} from "@ff-test-modularization/frontend-framework/contentStyle";
+import {ContentStyleTemplates} from "@iav-ff-test-1/frontend-framework/contentStyle";
 
 export const ExampleComponent5 = () => {
     const [translationString, setTranslationString] = useState("");

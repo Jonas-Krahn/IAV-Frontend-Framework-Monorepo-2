@@ -38,9 +38,9 @@ import {JWT} from "@aws-amplify/auth";
 import {
   AuthState,
   Credentials,
-} from "@ff-test-modularization/frontend-framework-shared/authenticationProvider";
+} from "@iav-ff-test-1/frontend-framework-shared/authenticationProvider";
 import {AWSAuthenticatorExtras, AWSUserData} from "./awsAuthenticatorTypes";
-import {MandatoryModuleNames} from "@ff-test-modularization/frontend-framework-shared/mandatoryModuleNames";
+import {MandatoryModuleNames} from "@iav-ff-test-1/frontend-framework-shared/mandatoryModuleNames";
 
 export interface FetchSettings {
   headers?: Headers;

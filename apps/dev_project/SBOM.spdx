@@ -2,10 +2,10 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "name": "@ff-test-modularization/frontend-framework@1.0.0",
-  "documentNamespace": "http://spdx.org/spdxdocs/@iavofficial%2ffrontend-framework-1.0.0-1b6ec031-b69c-486d-a9fa-775e3242e3d8",
+  "name": "@iav-ff-test-1/frontend-framework@1.0.0",
+  "documentNamespace": "http://spdx.org/spdxdocs/@iav-ff-test-1%2ffrontend-framework-1.0.0-8017a598-224d-45dd-82e0-9fa2746193db",
   "creationInfo": {
-    "created": "2025-03-03T12:40:07.848Z",
+    "created": "2025-03-05T09:23:24.046Z",
     "creators": [
       "Tool: npm/cli-10.5.0"
     ]
@@ -15,7 +15,7 @@
   ],
   "packages": [
     {
-      "name": "@ff-test-modularization/frontend-framework",
+      "name": "@iav-ff-test-1/frontend-framework",
       "SPDXID": "SPDXRef-Package-iavofficial.frontend-framework-1.0.0",
       "versionInfo": "1.0.0",
       "packageFileName": "",
@@ -33,16 +33,6 @@
       ]
     },
     {
-      "name": "Roboto-Regular",
-      "SPDXID": "SPDXRef-Package-roboto-regular-0.0.0",
-      "versionInfo": "0.0.0",
-      "packageFileName": "Roboto-Regular",
-      "description": "Download version of free fonts",
-      "downloadLocation": "https://github.com/openmaptiles/fonts/blob/master/roboto/Roboto-Regular.ttf",
-      "homepage": "https://github.com/openmaptiles/fonts/blob/master/roboto/Roboto-Regular.ttf",
-      "licenseDeclared": "Apache-2.0"
-    },
-    {
       "name": "ff-dev-project",
       "SPDXID": "SPDXRef-Package-ff-dev-project-1.0.0",
       "versionInfo": "1.0.0",
@@ -58,6 +48,16 @@
           "referenceLocator": "pkg:npm/ff-dev-project@1.0.0"
         }
       ]
+    },
+    {
+      "name": "Roboto-Regular",
+      "SPDXID": "SPDXRef-Package-roboto-regular-0.0.0",
+      "versionInfo": "0.0.0",
+      "packageFileName": "Roboto-Regular",
+      "description": "Download version of free fonts",
+      "downloadLocation": "https://github.com/openmaptiles/fonts/blob/master/roboto/Roboto-Regular.ttf",
+      "homepage": "https://github.com/openmaptiles/fonts/blob/master/roboto/Roboto-Regular.ttf",
+      "licenseDeclared": "Apache-2.0"
     },
     {
       "name": "@ampproject/remapping",
@@ -22469,10 +22469,10 @@
       ]
     },
     {
-      "name": "@ff-test-modularization/frontend-framework-aws-authenticator",
+      "name": "@iav-ff-test-1/frontend-framework-aws-authenticator",
       "SPDXID": "SPDXRef-Package-iavofficial.frontend-framework-aws-authenticator-1.0.0",
       "versionInfo": "1.0.0",
-      "packageFileName": "node_modules/@ff-test-modularization/frontend-framework-aws-authenticator",
+      "packageFileName": "node_modules/@iav-ff-test-1/frontend-framework-aws-authenticator",
       "description": "This package provides AWS authentication using AWS Cognito.",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,
@@ -22487,10 +22487,10 @@
       ]
     },
     {
-      "name": "@ff-test-modularization/frontend-framework",
+      "name": "@iav-ff-test-1/frontend-framework",
       "SPDXID": "SPDXRef-Package-iavofficial.frontend-framework-1.4.0-dev.2",
       "versionInfo": "1.4.0-dev.2",
-      "packageFileName": "node_modules/@ff-test-modularization/frontend-framework",
+      "packageFileName": "node_modules/@iav-ff-test-1/frontend-framework",
       "description": "This framework is the foundation of frontend applications to provide maintainability, expandability, unification and an improved developer experience.",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,
@@ -22505,10 +22505,10 @@
       ]
     },
     {
-      "name": "@ff-test-modularization/frontend-framework-shared",
+      "name": "@iav-ff-test-1/frontend-framework-shared",
       "SPDXID": "SPDXRef-Package-iavofficial.frontend-framework-shared-1.0.0",
       "versionInfo": "1.0.0",
-      "packageFileName": "node_modules/@ff-test-modularization/frontend-framework-shared",
+      "packageFileName": "node_modules/@iav-ff-test-1/frontend-framework-shared",
       "description": "This package provides react components, contexts, types, utils etc. for use in multiple frontend framework packages.",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,

@@ -23,8 +23,8 @@ import {getCurrentColorsContentArea} from "./colorSelectors/getCurrentColorsCont
 import {getCurrentColorsContentbar} from "./colorSelectors/getCurrentColorsContentbar";
 import {getCurrentColorsContentCell} from "./colorSelectors/getCurrentColorsContentCell";
 import {getCurrentColorsAuthenticationView} from "./colorSelectors/getCurrentColorsAuthenticationView";
-import { ColorSettingsContext } from "@ff-test-modularization/frontend-framework-shared/colorSettingsContext";
-import { ColorOptions } from "@ff-test-modularization/frontend-framework-shared/colorOptionTypes";
+import { ColorSettingsContext } from "@iav-ff-test-1/frontend-framework-shared/colorSettingsContext";
+import { ColorOptions } from "@iav-ff-test-1/frontend-framework-shared/colorOptionTypes";
 
 export interface ColorProviderProps {
   colorOptions?: ColorOptions;

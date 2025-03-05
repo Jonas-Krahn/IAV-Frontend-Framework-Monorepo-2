@@ -17,7 +17,7 @@
  */
 
 import translationES from "../../assets/translations/es.json";
-import { GlobalDataLayer } from "@ff-test-modularization/frontend-framework/globalDataLayer";
+import { GlobalDataLayer } from "@iav-ff-test-1/frontend-framework/globalDataLayer";
 import translationEN from "../../assets/translations/en.json";
 import translationDE from "../../assets/translations/de.json";
 import translationDECH from "../../assets/translations/de-CH.json";
@@ -25,7 +25,7 @@ import Layout from "../../Layout.tsx";
 import {
   defaultModules,
   defaultStore,
-} from "@ff-test-modularization/frontend-framework/store";
+} from "@iav-ff-test-1/frontend-framework/store";
 
 const store = defaultStore;
 

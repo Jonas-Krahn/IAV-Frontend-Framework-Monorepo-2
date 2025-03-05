@@ -1,12 +1,12 @@
 {
-  "name": "@ff-test-modularization/frontend-framework",
+  "name": "@iav-ff-test-1/frontend-framework",
   "version": "1.4.0-dev.2",
   "private": false,
   "license": "Apache-2.0",
   "description": "This framework is the foundation of frontend applications to provide maintainability, expandability, unification and an improved developer experience.",
   "scripts": {
     "setup": "npm i",
-    "build": "npx babel ./src --out-dir ./dist --extensions .ts,.tsx --copy-files && npx babel ./package.json --out-dir ./dist --copy-files && npx babel ./SBOM.spdx --out-dir ./dist --copy-files && npx babel ./LICENSE --out-dir ./dist --copy-files && npx babel ./NOTICE.md --out-dir ./dist --copy-files && npx tsc --outDir ./dist",
+    "build": "cross-env-shell \"../../scripts/unix/packages/build.sh || echo \"Not implemented yet.\"",
     "build-live": "cross-env-shell \"..\\..\\scripts\\win\\build-live.bat || echo \"Not implemented yet.\"",
     "test": "jest --passWithNoTests",
     "lint": "eslint src/**/*.{js,ts,tsx}",
@@ -35,7 +35,7 @@
     "iav-core"
   ],
   "dependencies": {
-    "@ff-test-modularization/frontend-framework-shared": "*",
+    "@iav-ff-test-1/frontend-framework-shared": "*",
     "@reduxjs/toolkit": "^2.5.1",
     "i18next": "^22.4.13",
     "i18next-browser-languagedetector": "^7.0.1",

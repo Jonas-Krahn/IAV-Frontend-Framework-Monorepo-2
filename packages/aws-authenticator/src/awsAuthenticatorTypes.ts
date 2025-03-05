@@ -18,7 +18,7 @@
 
 import {
   UserData,
-} from "@ff-test-modularization/frontend-framework-shared/authenticationProvider";
+} from "@iav-ff-test-1/frontend-framework-shared/authenticationProvider";
 import {AsyncThunk} from "@reduxjs/toolkit";
 import {JWT} from "@aws-amplify/auth";
 

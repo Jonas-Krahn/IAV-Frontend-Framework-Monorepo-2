@@ -16,13 +16,13 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { StoreBuilder } from "@ff-test-modularization/frontend-framework/store";
+import { StoreBuilder } from "@iav-ff-test-1/frontend-framework/store";
 import { Amplify } from "aws-amplify";
 import { cognitoUserPoolsTokenProvider } from "aws-amplify/auth/cognito";
 import { CookieStorage } from "aws-amplify/utils";
-import { awsAuthenticationViewFactory } from "@ff-test-modularization/frontend-framework-aws-authenticator/awsAuthenticationView";
-import { AWSAuthenticator } from "@ff-test-modularization/frontend-framework-aws-authenticator/awsAuthenticatorModule";
-import { useModuleContext } from "@ff-test-modularization/frontend-framework/moduleContext";
+import { awsAuthenticationViewFactory } from "@iav-ff-test-1/frontend-framework-aws-authenticator/awsAuthenticationView";
+import { AWSAuthenticator } from "@iav-ff-test-1/frontend-framework-aws-authenticator/awsAuthenticatorModule";
+import { useModuleContext } from "@iav-ff-test-1/frontend-framework/moduleContext";
 
 console.log("AHOI");
 

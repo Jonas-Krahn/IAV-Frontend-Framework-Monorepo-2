@@ -16,8 +16,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { ContentStyle, ContentStyleTemplates } from "@ff-test-modularization/frontend-framework/contentStyle";
-import { useDefaultSelector } from "@ff-test-modularization/frontend-framework/store";
+import { ContentStyle, ContentStyleTemplates } from "@iav-ff-test-1/frontend-framework/contentStyle";
+import { useDefaultSelector } from "@iav-ff-test-1/frontend-framework/store";
 
 export const ExampleComponent7 = () => {
   const { hasAuthenticated } = useDefaultSelector((state) => state.auth);

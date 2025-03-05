@@ -16,10 +16,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import {useTranslator} from "@ff-test-modularization/frontend-framework/translators";
-import {ImprintText} from "@ff-test-modularization/frontend-framework/imprint";
+import {useTranslator} from "@iav-ff-test-1/frontend-framework/translators";
+import {ImprintText} from "@iav-ff-test-1/frontend-framework/imprint";
 import {useContext} from "react";
-import {ColorSettingsContext} from "@ff-test-modularization/frontend-framework/colorSettingsContext";
+import {ColorSettingsContext} from "@iav-ff-test-1/frontend-framework/colorSettingsContext";
 
 export const LegalDocuments = () => {
     const t = useTranslator();

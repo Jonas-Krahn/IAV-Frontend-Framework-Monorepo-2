@@ -16,8 +16,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { AuthModule, Credentials, UserData } from "@ff-test-modularization/frontend-framework-shared/authenticationProvider";
-import { MandatoryModuleNames } from "@ff-test-modularization/frontend-framework-shared/mandatoryModuleNames";
+import { AuthModule, Credentials, UserData } from "@iav-ff-test-1/frontend-framework-shared/authenticationProvider";
+import { MandatoryModuleNames } from "@iav-ff-test-1/frontend-framework-shared/mandatoryModuleNames";
 import { createAsyncThunk, createSlice, PayloadAction, Slice, ThunkDispatch } from "@reduxjs/toolkit";
 
 export interface Props {
