@@ -27,3 +27,5 @@ export const AppLogoPlaceholder = (props: Props) => {
     <span style={{marginLeft: "20px"}}>{props.appLogoPlaceholder}</span>
   );
 };
+
+// TEST RELEASE
