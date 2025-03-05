@@ -55,5 +55,3 @@ export const LoginButtonWithSpinner = (props: Props) => {
     </>
   );
 };
-
-// TEST RELEASE
