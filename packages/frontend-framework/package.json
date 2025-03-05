@@ -74,11 +74,12 @@
     "typescript": "^5.0.2"
   },
   "files": [
-    "./LICENSE",
-    "./NOTICE",
+    "./dist",
     "./package.json",
-    "./README.md",
-    "./dist"
+    "./LICENSE",
+    "./NOTICE.md",
+    "./SBOM.spdx",
+    "./README.md"
   ],
   "exports": {
     "./store": "./dist/store.js",
