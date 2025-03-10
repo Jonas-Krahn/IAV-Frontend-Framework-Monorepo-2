@@ -34,9 +34,8 @@ import {HeaderOptions} from "./header/header";
 import {UserMenuOptions} from "./header/userMenu";
 import {setAcceptCookies} from "../utils/setAcceptCookies";
 import {useCookies} from "react-cookie";
-import {useDefaultSelector} from "../store";
-import {ACCEPTED_COOKIES_NAME} from "@iav-ff-test-2/frontend-framework-shared/constants";
-import {AuthenticationViewProps} from "@iav-ff-test-2/frontend-framework-shared/authenticationViewProps";
+import {ACCEPTED_COOKIES_NAME} from "@test-ff-publish/frontend-framework-shared/constants";
+import {AuthenticationViewProps} from "@test-ff-publish/frontend-framework-shared/authenticationViewProps";
 import "./uiLayer.css";
 import "../css/fonts.css";
 import "../css/darkModeInputsWorkAround.css";
@@ -45,6 +44,7 @@ import "../css/globalChangesOnPrimeReactComponents.css";
 import "../css/globalSettings.css";
 import "../css/globalColors.css";
 import "../css/authenticationView.css";
+import { useDefaultSelector } from "@test-ff-publish/frontend-framework-shared/moduleDefaults";
 
 export interface AuthOptions {
   backgroundImage?: string;

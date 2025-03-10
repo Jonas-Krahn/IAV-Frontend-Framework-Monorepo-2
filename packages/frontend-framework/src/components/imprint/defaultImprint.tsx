@@ -18,7 +18,7 @@
 
 import React, {useContext} from "react";
 import {ImprintText} from "./imprintText";
-import { ColorSettingsContext } from "@iav-ff-test-2/frontend-framework-shared/colorSettingsContext";
+import { ColorSettingsContext } from "@test-ff-publish/frontend-framework-shared/colorSettingsContext";
 
 export const DefaultImprint = () => {
   const colorSettingsContext = useContext(ColorSettingsContext);

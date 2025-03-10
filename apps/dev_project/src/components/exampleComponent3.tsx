@@ -16,7 +16,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import {useTranslator} from '@iav-ff-test-2/frontend-framework/translators';
+import {useTranslator} from '@test-ff-publish/frontend-framework/translators';
 
 export const ExampleComponent3 = () => {
     const t = useTranslator();

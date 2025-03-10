@@ -17,14 +17,14 @@
  */
 
 import {useEffect, useState} from "react";
-import {ContentWithBar} from "@iav-ff-test-2/frontend-framework/contentWithBar";
-import {LayoutBehaviour} from "@iav-ff-test-2/frontend-framework/contentLayout";
-import {BasicContentbarWrapper} from "@iav-ff-test-2/frontend-framework/basicContentbarWrapper";
+import {ContentWithBar} from "@test-ff-publish/frontend-framework/contentWithBar";
+import {LayoutBehaviour} from "@test-ff-publish/frontend-framework/contentLayout";
+import {BasicContentbarWrapper} from "@test-ff-publish/frontend-framework/basicContentbarWrapper";
 import {ContentbarExample} from "./contentbarExample";
-import {generateHashOfLength} from "@iav-ff-test-2/frontend-framework/hash";
+import {generateHashOfLength} from "@test-ff-publish/frontend-framework/hash";
 import {
     ContentStyleTemplates,
-} from "@iav-ff-test-2/frontend-framework/contentStyle";
+} from "@test-ff-publish/frontend-framework/contentStyle";
 
 export const ExampleComponent2 = () => {
     const [selectedId, setSelectedId] = useState("");

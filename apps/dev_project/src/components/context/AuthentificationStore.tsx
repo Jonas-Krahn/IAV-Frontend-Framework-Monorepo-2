@@ -17,8 +17,8 @@
  */
 
 /*import {PropsWithChildren, useCallback, useState} from "react";
-import {State} from "@iav-ff-test-2/frontend-framework/dummyAuthenticationProvider";
-import {AuthContext, Credentials} from "@iav-ff-test-2/frontend-framework/auth";*/
+import {State} from "@test-ff-publish/frontend-framework/dummyAuthenticationProvider";
+import {AuthContext, Credentials} from "@test-ff-publish/frontend-framework/auth";*/
 
 /*interface Props {
     additionalContextValues?: { [key: string]: any };

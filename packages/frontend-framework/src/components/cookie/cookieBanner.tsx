@@ -33,8 +33,8 @@ import {
   GREY5,
   GREY6,
   WHITE,
-} from "@iav-ff-test-2/frontend-framework-shared/constants";
-import { ColorSettingsContext } from "@iav-ff-test-2/frontend-framework-shared/colorSettingsContext";
+} from "@test-ff-publish/frontend-framework-shared/constants";
+import { ColorSettingsContext } from "@test-ff-publish/frontend-framework-shared/colorSettingsContext";
 
 const useStyles = makeStyles(({darkMode}: {darkMode: boolean}) => ({
   dialog: {

@@ -16,17 +16,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { StoreBuilder } from "@iav-ff-test-2/frontend-framework/store";
+import {
+  ModuleSetBuilder,
+  StoreBuilder,
+} from "@test-ff-publish/frontend-framework/store";
 import { Amplify } from "aws-amplify";
 import { cognitoUserPoolsTokenProvider } from "aws-amplify/auth/cognito";
 import { CookieStorage } from "aws-amplify/utils";
-import { awsAuthenticationViewFactory } from "@iav-ff-test-2/frontend-framework-aws-authenticator/awsAuthenticationView";
-import { AWSAuthenticator } from "@iav-ff-test-2/frontend-framework-aws-authenticator/awsAuthenticatorModule";
-import { useModuleContext } from "@iav-ff-test-2/frontend-framework/moduleContext";
-
-console.log("AHOI");
-
-console.log(import.meta.env);
+import { awsAuthenticationViewFactory } from "@test-ff-publish/frontend-framework-aws-authenticator/awsAuthenticationView";
+import { AWSAuthenticator } from "@test-ff-publish/frontend-framework-aws-authenticator/awsAuthenticatorModule";
+import { useModuleContext } from "@test-ff-publish/frontend-framework/moduleContext";
 
 const cognitoPool = import.meta.env.VITE_COGNITO_POOL;
 const cognitoAppId = import.meta.env.VITE_COGNITO_APP_ID;
@@ -53,7 +52,7 @@ const configureAmplify: () => void = () => {
   );
 };
 
-export const modules = {
+const customModules = {
   auth: new AWSAuthenticator({
     configureAmplify: configureAmplify,
     failOnNoLegalGroup: true,
@@ -61,15 +60,16 @@ export const modules = {
   }),
 };
 
-export const store = new StoreBuilder(modules)
-  /*.setFrameworkModuleProcessor("auth", (
-    authModule: AWSAuthenticator,
-    storeConfigBuilder: StoreConfigBuilder,
-  ) => {
-  
-  })*/ .build();
+export const modules = new ModuleSetBuilder({storeModules: customModules, nonStoreModules: {}}).build();
 
-export const AwsAuthenticationView = awsAuthenticationViewFactory(modules.auth);
+export const store = new StoreBuilder(modules.storeModules)
+/*    .setFrameworkModuleProcessor(
+    "auth",
+    (authModule: AWSAuthenticator, storeConfigBuilder) => {}
+  )*/
+  .build();
+
+export const AwsAuthenticationView = awsAuthenticationViewFactory(modules.all.auth);
 
 // Use this to create a typed module context.
 export const useTypedModuleContext = useModuleContext<typeof modules>;

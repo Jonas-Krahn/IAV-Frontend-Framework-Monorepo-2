@@ -2,8 +2,8 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "name": "@iav-ff-test-2/frontend-framework@1.0.0",
-  "documentNamespace": "http://spdx.org/spdxdocs/@iav-ff-test-2%2ffrontend-framework-1.0.0-5252710f-fd38-4169-aa8b-bcf4f33c4787",
+  "name": "@test-ff-publish/frontend-framework@1.0.0",
+  "documentNamespace": "http://spdx.org/spdxdocs/@test-ff-publish%2ffrontend-framework-1.0.0-5252710f-fd38-4169-aa8b-bcf4f33c4787",
   "creationInfo": {
     "created": "2025-03-05T09:23:02.840Z",
     "creators": [
@@ -15,7 +15,7 @@
   ],
   "packages": [
     {
-      "name": "@iav-ff-test-2/frontend-framework",
+      "name": "@test-ff-publish/frontend-framework",
       "SPDXID": "SPDXRef-Package-iavofficial.frontend-framework-1.0.0",
       "versionInfo": "1.0.0",
       "packageFileName": "",
@@ -22469,10 +22469,10 @@
       ]
     },
     {
-      "name": "@iav-ff-test-2/frontend-framework-aws-authenticator",
+      "name": "@test-ff-publish/frontend-framework-aws-authenticator",
       "SPDXID": "SPDXRef-Package-iavofficial.frontend-framework-aws-authenticator-1.0.0",
       "versionInfo": "1.0.0",
-      "packageFileName": "node_modules/@iav-ff-test-2/frontend-framework-aws-authenticator",
+      "packageFileName": "node_modules/@test-ff-publish/frontend-framework-aws-authenticator",
       "description": "This package provides AWS authentication using AWS Cognito.",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,
@@ -22487,10 +22487,10 @@
       ]
     },
     {
-      "name": "@iav-ff-test-2/frontend-framework",
+      "name": "@test-ff-publish/frontend-framework",
       "SPDXID": "SPDXRef-Package-iavofficial.frontend-framework-1.4.0-dev.2",
       "versionInfo": "1.4.0-dev.2",
-      "packageFileName": "node_modules/@iav-ff-test-2/frontend-framework",
+      "packageFileName": "node_modules/@test-ff-publish/frontend-framework",
       "description": "This framework is the foundation of frontend applications to provide maintainability, expandability, unification and an improved developer experience.",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,
@@ -22505,10 +22505,10 @@
       ]
     },
     {
-      "name": "@iav-ff-test-2/frontend-framework-shared",
+      "name": "@test-ff-publish/frontend-framework-shared",
       "SPDXID": "SPDXRef-Package-iavofficial.frontend-framework-shared-1.0.0",
       "versionInfo": "1.0.0",
-      "packageFileName": "node_modules/@iav-ff-test-2/frontend-framework-shared",
+      "packageFileName": "node_modules/@test-ff-publish/frontend-framework-shared",
       "description": "This package provides react components, contexts, types, utils etc. for use in multiple frontend framework packages.",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,

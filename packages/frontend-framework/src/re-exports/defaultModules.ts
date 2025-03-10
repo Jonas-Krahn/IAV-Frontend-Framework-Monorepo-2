@@ -1,0 +1,1 @@
+export * from "@test-ff-publish/frontend-framework-shared/dummyAuthenticatorModule";

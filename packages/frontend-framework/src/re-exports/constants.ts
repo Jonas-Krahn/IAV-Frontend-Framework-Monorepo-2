@@ -16,4 +16,4 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-export * from "@iav-ff-test-2/frontend-framework-shared/constants";
+export * from "@test-ff-publish/frontend-framework-shared/constants";

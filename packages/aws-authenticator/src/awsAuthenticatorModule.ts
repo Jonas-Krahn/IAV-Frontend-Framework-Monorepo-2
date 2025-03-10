@@ -34,13 +34,10 @@ import {
   ValidUserInformation,
 } from "./cognitoService";
 import {useDispatch, useSelector} from "react-redux";
-import {JWT} from "@aws-amplify/auth";
-import {
-  AuthState,
-  Credentials,
-} from "@iav-ff-test-2/frontend-framework-shared/authenticationProvider";
 import {AWSAuthenticatorExtras, AWSUserData} from "./awsAuthenticatorTypes";
-import {MandatoryModuleNames} from "@iav-ff-test-2/frontend-framework-shared/mandatoryModuleNames";
+import {MandatoryModuleNames} from "@test-ff-publish/frontend-framework-shared/mandatoryModuleNames";
+import { AuthModule, AuthState, Credentials } from "@test-ff-publish/frontend-framework-shared/authenticatorModule";
+import { JWT } from "aws-amplify/auth";
 
 export interface FetchSettings {
   headers?: Headers;

@@ -20,8 +20,8 @@ import React, {useContext} from "react";
 import {SimpleNavbarTab} from "./simpleNavbarTab/simpleNavbarTab";
 import {GroupableNavbarTab, NavbarTabProps} from "./typesNavbarTab";
 import {InjectedOptionsGroupableByWrapperToTab} from "../types/typesInjectedOptions";
-import { useDefaultSelector } from "../../../store";
-import {containsOneOrMoreGroups} from "@iav-ff-test-2/frontend-framework-shared/containsOneOrMoreGroups";
+import {containsOneOrMoreGroups} from "@test-ff-publish/frontend-framework-shared/containsOneOrMoreGroups";
+import { useDefaultSelector } from "@test-ff-publish/frontend-framework-shared/moduleDefaults";
 
 export interface Props {
   permittedGroups: string[];

@@ -31,8 +31,8 @@
     ]
   },
   "dependencies": {
-    "@iav-ff-test-2/frontend-framework": "*",
-    "@iav-ff-test-2/frontend-framework-aws-authenticator": "*",
+    "@test-ff-publish/frontend-framework": "*",
+    "@test-ff-publish/frontend-framework-aws-authenticator": "*",
     "aws-amplify": "^6.7.0",
     "primereact": "^10.3.3",
     "react": "^18.2.0",

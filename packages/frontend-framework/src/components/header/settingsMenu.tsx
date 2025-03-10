@@ -21,7 +21,7 @@ import {ContextMenu} from "primereact/contextmenu";
 import {LanguageContext, Translations} from "../../contexts/language";
 import {useTranslator} from "../internationalization/translators";
 import {RadioButton} from "primereact/radiobutton";
-import { ColorSettingsContext } from "@iav-ff-test-2/frontend-framework-shared/colorSettingsContext";
+import { ColorSettingsContext } from "@test-ff-publish/frontend-framework-shared/colorSettingsContext";
 
 // ##############################################
 // Notice: The enclosed imports are copied from 'primereact/menuitem/MenuItem' as the path could not be resolved by the gitlab builder

@@ -32,8 +32,8 @@ import {
   DEFAULT_ELEMENTSIZE,
   GAB_NAVBAR_UNFOLDED,
   NAVBAR_WIDTH_UNFOLDED,
-} from "@iav-ff-test-2/frontend-framework-shared/constants";
-import { ColorSettingsContext } from "@iav-ff-test-2/frontend-framework-shared/colorSettingsContext";
+} from "@test-ff-publish/frontend-framework-shared/constants";
+import { ColorSettingsContext } from "@test-ff-publish/frontend-framework-shared/colorSettingsContext";
 
 export interface NestedNavbarTabProps {
   additionalClassNames: string;

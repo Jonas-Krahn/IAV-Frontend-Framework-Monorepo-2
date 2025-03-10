@@ -27,35 +27,39 @@ import {ColorProvider, ColorProviderProps} from "../coloring/colorProvider";
 import {BrowserRouter} from "react-router-dom";
 import {EnhancedStore} from "@reduxjs/toolkit";
 import {Provider} from "react-redux";
-import {FFMandatoryModules, FFMandatoryState} from "../store";
 import {ModuleContextProvider} from "../contexts/providers/moduleContextProvider";
-import {DEFAULT_FALLBACK_LANGUAGE} from "@iav-ff-test-2/frontend-framework-shared/constants";
-import {AuthState} from "@iav-ff-test-2/frontend-framework-shared/authenticationProvider";
+import {DEFAULT_FALLBACK_LANGUAGE} from "@test-ff-publish/frontend-framework-shared/constants";
+import {
+  FFMandatoryStoreModules,
+  FFMandatoryState,
+  FFAllMandatoryModules,
+} from "@test-ff-publish/frontend-framework-shared/moduleOrchestrationTypes";
+import {FFModule} from "@test-ff-publish/frontend-framework-shared/generalModule";
 
 // Create this type to make fallbackLang optional for the user.
 type GlobalDataLayerLanguageOptions = Omit<LanguageOptions, "fallbackLang"> & {
   fallbackLang?: string;
 };
 
-interface Props<TAuthState extends AuthState> {
-  modules: FFMandatoryModules<TAuthState>;
-  store: EnhancedStore<FFMandatoryState>;
+interface Props<TState extends FFMandatoryState> {
+  modules: FFAllMandatoryModules<TState> & Record<string, FFModule>;
+  store: EnhancedStore<TState>;
   languageOptions?: GlobalDataLayerLanguageOptions;
   translations?: Translations;
   initI18Next?: () => void;
   colorSettings?: ColorProviderProps;
 }
 
-export const GlobalDataLayer = <TAuthState extends AuthState>(
-  props: PropsWithChildren<Props<TAuthState>>,
+export const GlobalDataLayer = <TState extends FFMandatoryState>(
+  props: PropsWithChildren<Props<TState>>,
 ) => {
   const fallbackLang =
     props.languageOptions?.fallbackLang ?? DEFAULT_FALLBACK_LANGUAGE;
   const initialLang =
     props.languageOptions?.initialLang ?? DEFAULT_FALLBACK_LANGUAGE;
   const languageOptions = {
-    fallbackLang: fallbackLang,
-    initialLang: initialLang,
+    fallbackLang,
+    initialLang,
   };
 
   return (
@@ -79,9 +83,9 @@ export const GlobalDataLayer = <TAuthState extends AuthState>(
   );
 };
 
-const ModuleLifecycleCaller = <TAuthState extends AuthState>(
+const ModuleLifecycleCaller = (
   props: PropsWithChildren<{
-    modules: FFMandatoryModules<TAuthState> & Record<string, any>;
+    modules: Record<string, FFModule>;
   }>,
 ) => {
   // React hooks have to be called in the same order at every render.

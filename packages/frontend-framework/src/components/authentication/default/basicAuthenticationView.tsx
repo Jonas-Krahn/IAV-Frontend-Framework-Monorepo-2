@@ -18,7 +18,7 @@
 
 import React, {FormEvent, useContext, useState} from "react";
 import {Link} from "react-router-dom";
-import {APPLICATION_LOGO_PLACEHOLDER, BLUE3, PADDING_GAB, WHITE} from "@iav-ff-test-2/frontend-framework-shared/constants";
+import {APPLICATION_LOGO_PLACEHOLDER, BLUE3, PADDING_GAB, WHITE} from "@test-ff-publish/frontend-framework-shared/constants";
 import {useTranslator} from "../../internationalization/translators";
 import loginBackgroundLightMode from "../../../assets/png/login_background_lightMode.png";
 import loginBackgroundDarkMode from "../../../assets/png/login_background_darkMode.png";
@@ -27,24 +27,24 @@ import {LanguageContext} from "../../../contexts/language";
 import {Tooltip} from "primereact/tooltip";
 import CompanyLogo from "../../../assets/svg/companyLogo";
 import TextField from "../../helper/textfield/TextField";
-import { AuthenticationViewProps } from "@iav-ff-test-2/frontend-framework-shared/authenticationViewProps";
-import { generateHashOfLength } from "@iav-ff-test-2/frontend-framework-shared/hash";
-import { parseLanguageResourcesIntoDropdownFormat } from "@iav-ff-test-2/frontend-framework-shared/parseLanguageResourcesIntoDropdownFormat";
-import { LoginButtonWithSpinner } from "@iav-ff-test-2/frontend-framework-shared/loginButtonWithSpinner";
-import { AppLogoPlaceholder } from "@iav-ff-test-2/frontend-framework-shared/appLogoPlaceholder";
-import { AuthState } from "@iav-ff-test-2/frontend-framework-shared/authenticationProvider";
-import { ColorSettingsContext } from "@iav-ff-test-2/frontend-framework-shared/colorSettingsContext";
+import { AuthenticationViewProps } from "@test-ff-publish/frontend-framework-shared/authenticationViewProps";
+import { generateHashOfLength } from "@test-ff-publish/frontend-framework-shared/hash";
+import { parseLanguageResourcesIntoDropdownFormat } from "@test-ff-publish/frontend-framework-shared/parseLanguageResourcesIntoDropdownFormat";
+import { LoginButtonWithSpinner } from "@test-ff-publish/frontend-framework-shared/loginButtonWithSpinner";
+import { AppLogoPlaceholder } from "@test-ff-publish/frontend-framework-shared/appLogoPlaceholder";
+import { ColorSettingsContext } from "@test-ff-publish/frontend-framework-shared/colorSettingsContext";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { ThunkDispatch, Action } from "@reduxjs/toolkit";
-import { ModuleContext } from "@iav-ff-test-2/frontend-framework-shared/moduleContext";
-import { MandatoryModuleNames } from "@iav-ff-test-2/frontend-framework-shared/mandatoryModuleNames";
+import { useModuleContext } from "@test-ff-publish/frontend-framework-shared/moduleContext";
+import { MandatoryModuleNames } from "@test-ff-publish/frontend-framework-shared/mandatoryModuleNames";
+import { AuthState } from "@test-ff-publish/frontend-framework-shared/authenticatorModule";
 
 type BasicAuthenticatorAuthDispatch = ThunkDispatch<AuthState, unknown, Action<string>>;
 type BasicAuthenticatorStoreState = {[MandatoryModuleNames.Authentication]: AuthState}
 
 export const BasicAuthenticationView = (props: AuthenticationViewProps) => {
-  const moduleContext = useContext(ModuleContext);
-  const authModule = moduleContext.modules.auth;
+  const {modules} = useModuleContext();
+  const authModule = modules.auth;
 
   const colorSettingsContext = useContext(ColorSettingsContext);
 

@@ -18,15 +18,15 @@
 
 import React from "react";
 import {PropsWithChildren} from "react";
-import {FFMandatoryModules} from "../../store";
-import { ModuleContext } from "@iav-ff-test-2/frontend-framework-shared/moduleContext";
-import { AuthState } from "@iav-ff-test-2/frontend-framework-shared/authenticationProvider";
+import { ModuleContext } from "@test-ff-publish/frontend-framework-shared/moduleContext";
+import { FFMandatoryState, FFAllMandatoryModules } from "@test-ff-publish/frontend-framework-shared/moduleOrchestrationTypes";
+import { FFModule } from "@test-ff-publish/frontend-framework-shared/generalModule";
 
-export interface Props<TAuthState extends AuthState> {
-  modules: FFMandatoryModules<TAuthState>;
+export interface Props<TState extends FFMandatoryState> {
+  modules: FFAllMandatoryModules<TState> & Record<string, FFModule>;
 }
 
-export const ModuleContextProvider = <TAuthState extends AuthState>(props: PropsWithChildren<Props<TAuthState>>) => {
+export const ModuleContextProvider = <TState extends FFMandatoryState>(props: PropsWithChildren<Props<TState>>) => {
   return (
     <ModuleContext.Provider
       value={{

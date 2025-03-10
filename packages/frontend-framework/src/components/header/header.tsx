@@ -26,9 +26,9 @@ import {SettingsMenu, SettingsMenuOptions} from "./settingsMenu";
 import {UserMenu, UserMenuOptions} from "./userMenu";
 import HeaderIcon from "./headerIcon";
 import makeStyles from "../content/style_options/makeStyles";
-import {APPLICATION_LOGO_PLACEHOLDER, BLUE3, PADDING_GAB, WHITE} from "@iav-ff-test-2/frontend-framework-shared/constants";
-import { ColorSettingsContext } from "@iav-ff-test-2/frontend-framework-shared/colorSettingsContext";
-import { AppLogoPlaceholder } from "@iav-ff-test-2/frontend-framework-shared/appLogoPlaceholder";
+import {APPLICATION_LOGO_PLACEHOLDER, BLUE3, PADDING_GAB, WHITE} from "@test-ff-publish/frontend-framework-shared/constants";
+import { ColorSettingsContext } from "@test-ff-publish/frontend-framework-shared/colorSettingsContext";
+import { AppLogoPlaceholder } from "@test-ff-publish/frontend-framework-shared/appLogoPlaceholder";
 
 const useStyles = makeStyles(() => ({
   wrapper: {

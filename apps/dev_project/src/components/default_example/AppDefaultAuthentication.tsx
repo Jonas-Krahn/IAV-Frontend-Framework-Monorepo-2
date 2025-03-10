@@ -17,15 +17,15 @@
  */
 
 import translationES from "../../assets/translations/es.json";
-import { GlobalDataLayer } from "@iav-ff-test-2/frontend-framework/globalDataLayer";
+import { GlobalDataLayer } from "@test-ff-publish/frontend-framework/globalDataLayer";
 import translationEN from "../../assets/translations/en.json";
 import translationDE from "../../assets/translations/de.json";
 import translationDECH from "../../assets/translations/de-CH.json";
 import Layout from "../../Layout.tsx";
 import {
-  defaultModules,
+  allDefaultModules,
   defaultStore,
-} from "@iav-ff-test-2/frontend-framework/store";
+} from "@test-ff-publish/frontend-framework/store";
 
 const store = defaultStore;
 
@@ -48,7 +48,7 @@ export const AppDefaultAuthentication = () => {
   return (
     <GlobalDataLayer
       store={store}
-      modules={defaultModules}
+      modules={allDefaultModules}
       translations={translations}
       colorSettings={{
         colorOptions: {},

@@ -19,8 +19,8 @@
 import {
     ContentLayout,
     LayoutBehaviour,
-} from "@iav-ff-test-2/frontend-framework/contentLayout";
-import {ContentStyleTemplates} from "@iav-ff-test-2/frontend-framework/contentStyle";
+} from "@test-ff-publish/frontend-framework/contentLayout";
+import {ContentStyleTemplates} from "@test-ff-publish/frontend-framework/contentStyle";
 
 export const ExampleComponent6 = () => {
     return (

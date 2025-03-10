@@ -30,8 +30,8 @@ import {calculateWidth} from "../../utils/calculateWidth";
 import {ContentBarButtonElement} from "./contentBarButtonElement";
 import {useStyleMap} from "./style_options/useStyleMap";
 import {StyleProps, StylesArray} from "./style_options/styleTypes";
-import { ColorSettingsContext } from "@iav-ff-test-2/frontend-framework-shared/colorSettingsContext";
-import {DEFAULT_ELEMENTSIZE, PADDING_GAB} from "@iav-ff-test-2/frontend-framework-shared/constants";
+import { ColorSettingsContext } from "@test-ff-publish/frontend-framework-shared/colorSettingsContext";
+import {DEFAULT_ELEMENTSIZE, PADDING_GAB} from "@test-ff-publish/frontend-framework-shared/constants";
 
 export const ContentBarStyles = {
   SPACING: "SPACING",

@@ -1,6 +1,6 @@
 {
-  "name": "@iav-ff-test-2/frontend-framework-shared",
-  "version": "1.1.0",
+  "name": "@test-ff-publish/frontend-framework-shared",
+  "version": "1.0.0",
   "private": false,
   "license": "Apache-2.0",
   "description": "This package provides react components, contexts, types, utils etc. for use in multiple frontend framework packages.",
@@ -36,7 +36,8 @@
     "aws authenticator"
   ],
   "dependencies": {
-    "@reduxjs/toolkit": "^2.5.1"
+    "@reduxjs/toolkit": "^2.5.1",
+    "react-redux": "^9.2.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -75,9 +76,16 @@
     "./moduleContext": "./dist/contexts/moduleContext.js",
     "./authenticationView.css": "./dist/css/authenticationView.css",
     "./constants": "./dist/constants/constants.js",
-    "./mandatoryModuleNames": "./dist/constants/auth/mandatoryModuleNames.js",
-    "./module": "./dist/types/modules/module.js",
-    "./authenticationProvider": "./dist/types/modules/auth/authenticationProvider.js",
+    "./mandatoryModuleNames": "./dist/constants/mandatoryModuleNames.js",
+    "./generalModule": "./dist/types/modules/generalModule.js",
+    "./moduleDefaults": "./dist/modules/module_orchestration/moduleDefaults.js",
+    "./moduleOrchestrationTypes": "./dist/types/modules/moduleOrchestrationTypes.js",
+    "./moduleSetBuilder": "./dist/modules/module_orchestration/moduleSetBuilder.js",
+    "./storeBuilder": "./dist/modules/module_orchestration/storeBuilder.js",
+    "./storeConfig": "./dist/modules/module_orchestration/storeConfig.js",
+    "./storeConfigBuilder": "./dist/modules/module_orchestration/storeConfigBuilder.js",
+    "./dummyAuthenticatorModule": "./dist/modules/default_modules/auth/dummyAuthenticatorModule.js",
+    "./authenticatorModule": "./dist/types/modules/auth/authenticatorModule.js",
     "./authenticationViewProps": "./dist/types/modules/auth/authenticationViewProps.js",
     "./colorOptionTypes": "./dist/types/color/colorOptionTypes.js",
     "./requiredMutable": "./dist/types/util-types/requiredMutable.js",
@@ -104,13 +112,34 @@
         "./dist/constants/constants.d.ts"
       ],
       "./mandatoryModuleNames": [
-        "./dist/constants/auth/mandatoryModuleNames.d.ts"
+        "./dist/constants/mandatoryModuleNames.d.ts"
       ],
-      "./module": [
-        "./dist/types/modules/module.d.ts"
+      "./generalModule": [
+        "./dist/types/modules/generalModule.d.ts"
       ],
-      "./authenticationProvider": [
-        "./dist/types/modules/auth/authenticationProvider.d.ts"
+      "./moduleDefaults": [
+        "./dist/modules/module_orchestration/moduleDefaults.d.ts"
+      ],
+      "./moduleOrchestrationTypes": [
+        "./dist/types/modules/moduleOrchestrationTypes.d.ts"
+      ],
+      "./moduleSetBuilder": [
+        "./dist/modules/module_orchestration/moduleSetBuilder.d.ts"
+      ],
+      "./storeBuilder": [
+        "./dist/modules/module_orchestration/storeBuilder.d.ts"
+      ],
+      "./storeConfig": [
+        "./dist/modules/module_orchestration/storeConfig.d.ts"
+      ],
+      "./storeConfigBuilder": [
+        "./dist/modules/module_orchestration/storeConfigBuilder.d.ts"
+      ],
+      "./dummyAuthenticatorModule": [
+        "./dist/modules/default_modules/auth/dummyAuthenticatorModule.d.ts"
+      ],
+      "./authenticatorModule": [
+        "./dist/types/modules/auth/authenticatorModule.d.ts"
       ],
       "./authenticationViewProps": [
         "./dist/types/modules/auth/authenticationViewProps.d.ts"

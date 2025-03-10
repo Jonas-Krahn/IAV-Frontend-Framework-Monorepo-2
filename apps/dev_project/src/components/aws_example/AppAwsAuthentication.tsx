@@ -17,7 +17,7 @@
  */
 
 import translationES from "../../assets/translations/es.json";
-import { GlobalDataLayer } from "@iav-ff-test-2/frontend-framework/globalDataLayer";
+import { GlobalDataLayer } from "@test-ff-publish/frontend-framework/globalDataLayer";
 import translationEN from "../../assets/translations/en.json";
 import translationDE from "../../assets/translations/de.json";
 import translationDECH from "../../assets/translations/de-CH.json";
@@ -43,7 +43,7 @@ export const AppAwsAuthentication = () => {
   return (
     <GlobalDataLayer
       store={store}
-      modules={modules}
+      modules={modules.all}
       translations={translations}
       colorSettings={{
         colorOptions: {},
