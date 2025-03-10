@@ -28,3 +28,4 @@ export function useCookiesAccepted() {
       cookies[ACCEPTED_COOKIES_NAME] === true)
   );
 }
+// Test Release
