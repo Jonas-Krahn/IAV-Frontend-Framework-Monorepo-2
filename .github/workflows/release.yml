@@ -70,13 +70,13 @@ jobs:
           mkdir main
           git archive --format=tar main | tar -x -C main
 
-      - run: chmod +x ./main/scripts/unix/*
+      - run: find ./scripts/unix/ -type f -exec chmod +x {} \;
 
       - name: Generate docs
         run: |
-          ./main/scripts/unix/copy-additional-files.sh
+          ./main/scripts/unix/docs_generation/copy-additional-files.sh
           cd main
           npm i
           npm run generate-docs
           cd ..
-          ./main/scripts/unix/process-and-commit-docs.sh
+          ./main/scripts/unix/docs_generation/process-and-commit-docs.sh
