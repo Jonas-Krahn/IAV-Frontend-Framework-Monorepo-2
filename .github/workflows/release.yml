@@ -70,7 +70,7 @@ jobs:
           mkdir main
           git archive --format=tar main | tar -x -C main
 
-      - run: find ./scripts/unix/ -type f -exec chmod +x {} \;
+      - run: find ./main/scripts/unix/ -type f -exec chmod +x {} \;
 
       - name: Generate docs
         run: |
