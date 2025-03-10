@@ -1,3 +1,13 @@
+## [@test-ff-publish/frontend-framework-v5.0.0](https://github.com/Jonas-Krahn/IAV-Frontend-Framework-Monorepo-2/compare/@test-ff-publish/frontend-framework-v4.0.0...@test-ff-publish/frontend-framework-v5.0.0) (2025-03-10)
+
+### ⚠ BREAKING CHANGES
+
+* TEST RELEASE
+
+### BREAKING
+
+* TEST RELEASE ([ce58064](https://github.com/Jonas-Krahn/IAV-Frontend-Framework-Monorepo-2/commit/ce580644523f948cfd9643024ed8db21f8af3b84))
+
 ## [@test-ff-publish/frontend-framework-v4.0.0](https://github.com/Jonas-Krahn/IAV-Frontend-Framework-Monorepo-2/compare/@test-ff-publish/frontend-framework-v3.0.0...@test-ff-publish/frontend-framework-v4.0.0) (2025-03-10)
 
 ### ⚠ BREAKING CHANGES
